@@ -13,3 +13,56 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 ```
 
+```{r}
+tele <- tele %>%
+  mutate(relation_qual_1 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_1)),
+         relation_qual_2 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_2)),
+         relation_qual_3 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_3)),
+         relation_qual_4 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_4)),
+         relation_qual_5 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_5)),
+         relation_qual_6 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_6)),
+         relation_qual_7 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_7)),
+         relation_qual_8 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_8)),
+         relation_qual_9 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_9)),
+         relation_qual_10 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_10)),
+         relation_qual_11 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_11)),
+         relation_qual_12 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_12)),
+         relation_qual_13 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_13)),
+         relation_qual_14 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_14)),
+         relation_qual_15 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_15)),
+         relation_qual_16 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_16)),
+         relation_qual_17 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_17)),
+         relation_qual_18 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_18)),
+         relation_qual_19 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_19)),
+         relation_qual_20 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_20)),
+         relation_qual_21 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_21)),
+         relation_qual_22 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_22)),
+         relation_qual_23 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_23)),
+         relation_qual_24 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_24)),
+         relation_qual_25 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_26)),
+         relation_qual_27 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_27)),
+         self.object_1 = as.numeric(gsub("[a-zA-Z]", "", self.object_1)),
+         self.object_2 = as.numeric(gsub("[a-zA-Z]", "", self.object_2)),
+         self.object_3 = as.numeric(gsub("[a-zA-Z]", "", self.object_3)),
+         self.object_4 = as.numeric(gsub("[a-zA-Z]", "", self.object_4)),
+         self.object_5 = as.numeric(gsub("[a-zA-Z]", "", self.object_5)),
+         self.object_6 = as.numeric(gsub("[a-zA-Z]", "", self.object_6)),
+         self.object_7 = as.numeric(gsub("[a-zA-Z]", "", self.object_7)),
+         self.object_8 = as.numeric(gsub("[a-zA-Z]", "", self.object_8)),
+         self.object_9 = as.numeric(gsub("[a-zA-Z]", "", self.object_9)),
+         self.object_10 = as.numeric(gsub("[a-zA-Z]", "", self.object_10)),
+         
+         
+         )
+```
+
+# Create correlation matrix
+
+```{r}
+corr.test(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5, 
+                 gatekeeping_7, gatekeeping_9, gatekeeping_11, 
+                 gatekeeping_13, gatekeeping_16))$r
+
+corr.test(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
+                 gatekeeping_8, gatekeeping_10, gatekeeping_12, 
+                 gatekeeping_14, gatekeeping_15))
