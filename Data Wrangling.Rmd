@@ -10,12 +10,13 @@ knitr::opts_chunk$set(echo = TRUE)
 ```
 
 ```{r}
-tele <- read.csv("TeleCom_Dyad_premeasures.csv")
+library(tidyverse)
+library(psych)
+library(readr)
 ```
 
 ```{r}
-library(tidyverse)
-library(psych)
+tele <- read.csv("TeleCom_Dyad_premeasures.csv")
 
 #names(tele)
 glimpse(tele)
