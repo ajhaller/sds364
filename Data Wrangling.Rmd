@@ -51,9 +51,19 @@ tele <- tele %>%
          self.object_8 = as.numeric(gsub("[a-zA-Z]", "", self.object_8)),
          self.object_9 = as.numeric(gsub("[a-zA-Z]", "", self.object_9)),
          self.object_10 = as.numeric(gsub("[a-zA-Z]", "", self.object_10)),
-         
-         
-         )
+         other.object_1 = as.numeric(gsub("[a-zA-Z]", "", other.object_1)),
+         other.object_2 = as.numeric(gsub("[a-zA-Z]", "", other.object_2)),
+         other.object_3 = as.numeric(gsub("[a-zA-Z]", "", other.object_3)),
+         other.object_4 = as.numeric(gsub("[a-zA-Z]", "", other.object_4)),
+         other.object_5 = as.numeric(gsub("[a-zA-Z]", "", other.object_5)),
+         other.object_6 = as.numeric(gsub("[a-zA-Z]", "", other.object_6)),
+         other.object_7 = as.numeric(gsub("[a-zA-Z]", "", other.object_7)),
+         other.object_8 = as.numeric(gsub("[a-zA-Z]", "", other.object_8)),
+         other.object_9 = as.numeric(gsub("[a-zA-Z]", "", other.object_9)),
+         other.object_10 = as.numeric(gsub("[a-zA-Z]", "", other.object_10))
+
+  )
+
 ```
 
 # Create correlation matrix
@@ -66,3 +76,35 @@ corr.test(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5,
 corr.test(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
                  gatekeeping_8, gatekeeping_10, gatekeeping_12, 
                  gatekeeping_14, gatekeeping_15))
+
+#corr.test(select(tele, gatekeeping_1:gatekeeping_16))$r
+```
+
+# Reverse score anything
+
+# Calcutate chronbach's alpha
+
+```{r}
+alpha(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5, 
+                 gatekeeping_7, gatekeeping_9, gatekeeping_11, 
+                 gatekeeping_13, gatekeeping_16))
+
+alpha_child <- alpha(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
+                 gatekeeping_8, gatekeeping_10, gatekeeping_12, 
+                 gatekeeping_14, gatekeeping_15))$total[1]
+```
+
+The gatekeeping in childcare scale was reliable, $\alpha$ = `r round(alpha_child, 2)`.
+
+# Calculate Scale scores
+
+```{r}
+tele <- tele %>%
+  mutate(gate_home = rowMeans(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5, 
+                 gatekeeping_7, gatekeeping_9, gatekeeping_11, 
+                 gatekeeping_13, gatekeeping_16), na.rm = TRUE),
+         gate_child = rowMeans(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
+                 gatekeeping_8, gatekeeping_10, gatekeeping_12, 
+                 gatekeeping_14, gatekeeping_15), na.rm = TRUE))
+
+```
