@@ -19,7 +19,7 @@ library(readr)
 tele <- read.csv("TeleCom_Dyad_premeasures.csv")
 
 #names(tele)
-glimpse(tele)
+#glimpse(tele)
 ```
 
 ```{r}
@@ -49,7 +49,6 @@ tele <- tele %>%
          relation_qual_23 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_23)),
          relation_qual_24 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_24)),
          relation_qual_25 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_25)),
-         relation_qual_27 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_27)),
          self.object_1 = as.numeric(gsub("[a-zA-Z]", "", self.object_1)),
          self.object_2 = as.numeric(gsub("[a-zA-Z]", "", self.object_2)),
          self.object_3 = as.numeric(gsub("[a-zA-Z]", "", self.object_3)),
