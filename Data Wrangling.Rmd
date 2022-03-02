@@ -73,6 +73,17 @@ tele <- tele %>%
 
   )
 
+# Changing relationship qual 27 to numeric 
+
+tele <- tele %>%
+  mutate(relation_qual_27 =
+           case_when(
+             relation_qual_27 == "not too happy" ~ 1,
+             relation_qual_27 == "pretty happy" ~ 2,
+             relation_qual_27 == "very happy" ~ 3
+           )
+  )
+
 ```
 
 # Create correlation matrix
