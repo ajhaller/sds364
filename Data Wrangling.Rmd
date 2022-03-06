@@ -163,7 +163,16 @@ corr.test(select(partners, other.object_1:other.object_10))$r
 #Relationship Quality 1 - 12 Reverse Scoring
 
 partners <- partners %>%
-mutate(w11mar2.r_A = (1 + 9) - w11mar2_A,
+mutate(relation_qual_1 = (1 + 9) - relation_qual_1,
+       relation_qual_2 = (1 + 9) - relation_qual_1,
+       relation_qual_3 = (1 + 9) - relation_qual_1,
+       relation_qual_4 = (1 + 9) - relation_qual_1,
+       relation_qual_5 = (1 + 9) - relation_qual_1,
+       relation_qual_6 = (1 + 9) - relation_qual_1,
+       relation_qual_7 = (1 + 9) - relation_qual_1,
+       relation_qual_8 = (1 + 9) - relation_qual_1,
+       relation_qual_9 = (1 + 9) - relation_qual_1,
+       relation_qual_10 = (1 + 9) - relation_qual_1
        )
 ```
 
