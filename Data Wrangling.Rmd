@@ -97,6 +97,15 @@ corr.test(select(tele, other.object_1:other.object_10))$r
 
 # Reverse score anything
 
+```{r}
+#Relationship Quality 1 - 12 Reverse Scoring
+
+tele <- tele %>%
+mutate(w11mar2.r_A = (1 + 9) - w11mar2_A,
+       )
+```
+
+
 # Calcutate chronbach's alpha
 
 ```{r}
