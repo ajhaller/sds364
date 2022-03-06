@@ -89,7 +89,7 @@ tele <- tele %>%
 
 ```{r}
 
-corr.test(select(tele, realation_qual_1:relation_qual_25))$r
+corr.test(select(tele, relation_qual_1:relation_qual_25))$r
 
 corr.test(select(tele, other.object_1:other.object_10))$r
 
