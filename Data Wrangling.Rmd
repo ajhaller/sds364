@@ -106,8 +106,8 @@ corr.test(select(tele, other.object_1:other.object_10))$r
 # Calcutate chronbach's alpha
 
 ```{r}
-partners$self_object <- rowMeans(select(tele, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10))
-partners$other_object <- rowMeans(select(tele, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10))
+partners$self_object <- rowMeans(select(partners, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10))
+partners$other_object <- rowMeans(select(partners, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10))
 partners <- partners %>%
   mutate(tso_mean = -1*(self_object - other_object))
 partners <- partners %>%
