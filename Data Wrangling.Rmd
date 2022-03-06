@@ -164,15 +164,15 @@ corr.test(select(partners, other.object_1:other.object_10))$r
 
 partners <- partners %>%
 mutate(relation_qual_1 = (1 + 9) - relation_qual_1,
-       relation_qual_2 = (1 + 9) - relation_qual_1,
-       relation_qual_3 = (1 + 9) - relation_qual_1,
-       relation_qual_4 = (1 + 9) - relation_qual_1,
-       relation_qual_5 = (1 + 9) - relation_qual_1,
-       relation_qual_6 = (1 + 9) - relation_qual_1,
-       relation_qual_7 = (1 + 9) - relation_qual_1,
-       relation_qual_8 = (1 + 9) - relation_qual_1,
-       relation_qual_9 = (1 + 9) - relation_qual_1,
-       relation_qual_10 = (1 + 9) - relation_qual_1
+       relation_qual_2 = (1 + 9) - relation_qual_2,
+       relation_qual_3 = (1 + 9) - relation_qual_3,
+       relation_qual_4 = (1 + 9) - relation_qual_4,
+       relation_qual_5 = (1 + 9) - relation_qual_5,
+       relation_qual_6 = (1 + 9) - relation_qual_6,
+       relation_qual_7 = (1 + 9) - relation_qual_7,
+       relation_qual_8 = (1 + 9) - relation_qual_8,
+       relation_qual_9 = (1 + 9) - relation_qual_9,
+       relation_qual_10 = (1 + 9) - relation_qual_10
        )
 ```
 
@@ -188,8 +188,6 @@ partners <- partners %>%
   select(-c(self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10 ))
 #names(Premeasures)
 ```
-
-
 
 The gatekeeping in childcare scale was reliable, $\alpha$ = `r round(alpha_child, 2)`.
 
