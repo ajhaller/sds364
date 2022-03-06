@@ -23,7 +23,7 @@ tele <- read.csv("TeleCom_Dyad_premeasures.csv")
 ```
 
 ```{r}
-tele <- tele %>%
+partners <- tele %>%
   mutate(relation_qual_1 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_1)),
          relation_qual_2 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_2)),
          relation_qual_3 = as.numeric(gsub("[a-zA-Z]", "", relation_qual_3)),
@@ -74,7 +74,7 @@ tele <- tele %>%
 
 # Changing relationship qual 27 to numeric 
 
-tele <- tele %>%
+partners <- tele %>%
   mutate(relation_qual_27 =
            case_when(
              relation_qual_27 == "not too happy" ~ 1,
@@ -82,6 +82,12 @@ tele <- tele %>%
              relation_qual_27 == "very happy" ~ 3
            )
   )
+
+```
+
+```{r}
+partners <- tele %>%
+  select(relation_qual_1, relation_qual_2, relation_qual_3, relation_qual_4, relation_qual_5, relation_qual_6, relation_qual_7, relation_qual_8, relation_qual_9, relation_qual_10, relation_qual_11, relation_qual_12, relation_qual_13, relation_qual_14, relation_qual_15, relation_qual_16, relation_qual_17, relation_qual_18, relation_qual_19, relation_qual_20, relation_qual_21, relation_qual_22, relation_qual_23, relation_qual_24, relation_qual_25, relation_qual_26, relation_qual_27, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10)
 
 ```
 
@@ -109,11 +115,11 @@ mutate(w11mar2.r_A = (1 + 9) - w11mar2_A,
 # Calcutate chronbach's alpha
 
 ```{r}
-tele$self_object <- rowMeans(select(tele, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10))
-tele$other_object <- rowMeans(select(tele, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10))
-tele <- tele %>%
+partners$self_object <- rowMeans(select(tele, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10))
+partners$other_object <- rowMeans(select(tele, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10))
+partners <- partners %>%
   mutate(tso_mean = -1*(self_object - other_object))
-tele <- tele %>%
+partners <- partners %>%
   select(-c(self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10 ))
 #names(Premeasures)
 ```
