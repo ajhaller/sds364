@@ -146,12 +146,13 @@ partners <- partners %>%
 partners
 ```
 
-
 # Create correlation matrix
 
 ```{r}
 
 corr.test(select(partners, relation_qual_1:relation_qual_25))$r
+
+corr.test(select(partners, self.object_1:self.object_10))$r
 
 corr.test(select(partners, other.object_1:other.object_10))$r
 
@@ -174,8 +175,8 @@ mutate(relation_qual_1 = (1 + 9) - relation_qual_1,
        relation_qual_9 = (1 + 9) - relation_qual_9,
        relation_qual_10 = (1 + 9) - relation_qual_10
        )
-```
 
+```
 
 # Calcutate chronbach's alpha
 
