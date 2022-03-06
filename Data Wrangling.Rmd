@@ -109,14 +109,16 @@ mutate(w11mar2.r_A = (1 + 9) - w11mar2_A,
 # Calcutate chronbach's alpha
 
 ```{r}
-alpha(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5, 
-                 gatekeeping_7, gatekeeping_9, gatekeeping_11, 
-                 gatekeeping_13, gatekeeping_16))
-
-alpha_child <- alpha(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
-                 gatekeeping_8, gatekeeping_10, gatekeeping_12, 
-                 gatekeeping_14, gatekeeping_15))$total[1]
+tele$self_object <- rowMeans(select(tele, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10))
+tele$other_object <- rowMeans(select(tele, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10))
+tele <- tele %>%
+  mutate(tso_mean = -1*(self_object - other_object))
+tele <- tele %>%
+  select(-c(self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10 ))
+#names(Premeasures)
 ```
+
+
 
 The gatekeeping in childcare scale was reliable, $\alpha$ = `r round(alpha_child, 2)`.
 
