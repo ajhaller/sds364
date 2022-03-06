@@ -88,15 +88,11 @@ tele <- tele %>%
 # Create correlation matrix
 
 ```{r}
-corr.test(select(tele, gatekeeping_2, gatekeeping_3, gatekeeping_5, 
-                 gatekeeping_7, gatekeeping_9, gatekeeping_11, 
-                 gatekeeping_13, gatekeeping_16))$r
 
-corr.test(select(tele, gatekeeping_1, gatekeeping_4, gatekeeping_6, 
-                 gatekeeping_8, gatekeeping_10, gatekeeping_12, 
-                 gatekeeping_14, gatekeeping_15))
+corr.test(select(tele, realation_qual_1:relation_qual_25))$r
 
-#corr.test(select(tele, gatekeeping_1:gatekeeping_16))$r
+corr.test(select(tele, other.object_1:other.object_10))$r
+
 ```
 
 # Reverse score anything
