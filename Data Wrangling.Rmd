@@ -178,6 +178,29 @@ mutate(relation_qual_1 = (1 + 9) - relation_qual_1,
 
 ```
 
+
+```{r}
+# Relationship Quality Reverse Scoring 13 - 25
+
+partners <- partners %>%
+mutate(relation_qual_13 = (1 + 9) - relation_qual_13,
+       relation_qual_14 = (1 + 9) - relation_qual_14,
+       relation_qual_15 = (1 + 9) - relation_qual_15,
+       relation_qual_16 = (1 + 9) - relation_qual_16,
+       relation_qual_17 = (1 + 9) - relation_qual_17,
+       relation_qual_18 = (1 + 9) - relation_qual_18,
+       relation_qual_19 = (1 + 9) - relation_qual_19,
+       relation_qual_20 = (1 + 9) - relation_qual_20,
+       relation_qual_21 = (1 + 9) - relation_qual_21,
+       relation_qual_22 = (1 + 9) - relation_qual_22, 
+       relation_qual_23 = (1 + 9) - relation_qual_23, 
+       relation_qual_24 = (1 + 9) - relation_qual_24, 
+       relation_qual_25 = (1 + 9) - relation_qual_25
+       )
+
+```
+
+
 # Calcutate chronbach's alpha
 
 ```{r}
