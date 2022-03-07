@@ -117,56 +117,6 @@ corr.test(select(partners, other.object_1:other.object_10))$r
 
 ```
 
-# Reverse score anything
-
-```{r}
-# Relationship Quality Reverse Scoring #14
-
-partners <- partners %>%
-mutate(relation_qual_14 = (1 + 9) - relation_qual_14)
-
-```
-
-
-```{r}
-# Relationship Quality Reverse Score Included
-
-corr.test(select(partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
-```
-
-```{r}
-# Reverse Score Self Object 1 - 10
-
-partners <- partners %>%
-mutate(self.object_1 = (1 + 10) - self.object_1, 
-       self.object_2 = (1 + 10) - self.object_2, 
-       self.object_4 = (1 + 10) - self.object_4, 
-       self.object_5 = (1 + 10) - self.object_5, 
-       self.object_8 = (1 + 10) - self.object_8, 
-       self.object_9 = (1 + 10) - self.object_9)
-
-corr.test(select(partners, self.object_1:self.object_10))$r
-
-
-
-```
-
-```{r}
-
-# Reverse Score Other Object - all except 4 & 7 
-
-partners <- partners %>%
-mutate(other.object_1 = (1 + 10) - other.object_1,
-       other.object_6 = (1 + 10) - other.object_6,
-       other.object_8 = (1 + 10) - other.object_8, 
-       other.object_9 = (1 + 10) - other.object_9, 
-       other.object_10 = (1 + 10) - other.object_10)
-
-
-corr.test(select(partners, other.object_1:other.object_3, other.object_5, other.object_6, other.object_8:other.object_10))$r
-
-```
-
 # Calculating Cronbach's alpha for relationship quality
 
 raw_alpha: 0.87
