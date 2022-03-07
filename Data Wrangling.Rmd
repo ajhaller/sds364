@@ -98,55 +98,6 @@ partners <- partners %>%
 
 partners <- partners %>% 
   filter(!is.na(partners))
-  # Relationship Quality missings
-#   filter(!is.na(relation_qual_1),
-#          !is.na(relation_qual_2),
-#          !is.na(relation_qual_3),
-#          !is.na(relation_qual_4),
-#          !is.na(relation_qual_5),
-#          !is.na(relation_qual_6),
-#          !is.na(relation_qual_7),
-#          !is.na(relation_qual_8),
-#          !is.na(relation_qual_9),
-#          !is.na(relation_qual_10),
-#          !is.na(relation_qual_11),
-#          !is.na(relation_qual_12),
-#          !is.na(relation_qual_13),
-#          !is.na(relation_qual_14),
-#          !is.na(relation_qual_15),
-#          !is.na(relation_qual_16),
-#          !is.na(relation_qual_17),
-#          !is.na(relation_qual_18),
-#          !is.na(relation_qual_19),
-#          !is.na(relation_qual_20),
-#          !is.na(relation_qual_21),
-#          !is.na(relation_qual_22),
-#          !is.na(relation_qual_23),
-#          !is.na(relation_qual_24),
-#          !is.na(relation_qual_25)) %>% 
-#   # Self Object missings
-#   filter(!is.na(self.object_1),
-#          !is.na(self.object_2),
-#          !is.na(self.object_3),
-#          !is.na(self.object_4),
-#          !is.na(self.object_5),
-#          !is.na(self.object_6),
-#          !is.na(self.object_7),
-#          !is.na(self.object_8),
-#          !is.na(self.object_9),
-#          !is.na(self.object_10)) %>% 
-#   # Other Object missings
-#   filter(!is.na(other.object_1),
-#          !is.na(other.object_2),
-#          !is.na(other.object_3),
-#          !is.na(other.object_4),
-#          !is.na(other.object_5),
-#          !is.na(other.object_6),
-#          !is.na(other.object_7),
-#          !is.na(other.object_8),
-#          !is.na(other.object_9),
-#          !is.na(self.object_10))
-# partners
 ```
 
 # Create correlation matrix
