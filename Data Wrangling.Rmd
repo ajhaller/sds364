@@ -4,7 +4,7 @@ author: "Aushanae Haller"
 date: '2022-02-28'
 output: html_document
 editor_options: 
-  chunk_output_type: inline
+  chunk_output_type: console
 ---
 
 ```{r setup, include=FALSE}
@@ -109,7 +109,7 @@ partners <- partners %>%
 # Select Relation Qual 25, 23, 20, 19, maybe 17, 15, 14 maybe 12, 3
 # Reverse 14
 
-corr.test(select(partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
+corr.test(select(dyadID, partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
 
 corr.test(select(partners, self.object_1:self.object_10))$r
 
