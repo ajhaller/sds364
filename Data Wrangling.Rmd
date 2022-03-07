@@ -150,7 +150,12 @@ partners
 
 ```{r}
 
-corr.test(select(partners, relation_qual_1:relation_qual_25))$r
+#corr.test(select(partners, relation_qual_1:relation_qual_25))$r
+
+# Select Relation Qual 25, 23, 20, 19, maybe 17, 15, 14 maybe 12, 3
+# Reverse 14
+
+corr.test(select(partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
 
 corr.test(select(partners, self.object_1:self.object_10))$r
 
@@ -161,43 +166,18 @@ corr.test(select(partners, other.object_1:other.object_10))$r
 # Reverse score anything
 
 ```{r}
-#Relationship Quality 1 - 12 Reverse Scoring
+# Relationship Quality Reverse Scoring 13 - 25
 
 partners <- partners %>%
-mutate(relation_qual_1 = (1 + 9) - relation_qual_1,
-       relation_qual_2 = (1 + 9) - relation_qual_2,
-       relation_qual_3 = (1 + 9) - relation_qual_3,
-       relation_qual_4 = (1 + 9) - relation_qual_4,
-       relation_qual_5 = (1 + 9) - relation_qual_5,
-       relation_qual_6 = (1 + 9) - relation_qual_6,
-       relation_qual_7 = (1 + 9) - relation_qual_7,
-       relation_qual_8 = (1 + 9) - relation_qual_8,
-       relation_qual_9 = (1 + 9) - relation_qual_9,
-       relation_qual_10 = (1 + 9) - relation_qual_10
-       )
+mutate(relation_qual_14 = (1 + 9) - relation_qual_14)
 
 ```
 
 
 ```{r}
-# Relationship Quality Reverse Scoring 13 - 25
+# Relationship Quality Reverse Score Included
 
-partners <- partners %>%
-mutate(relation_qual_13 = (1 + 9) - relation_qual_13,
-       relation_qual_14 = (1 + 9) - relation_qual_14,
-       relation_qual_15 = (1 + 9) - relation_qual_15,
-       relation_qual_16 = (1 + 9) - relation_qual_16,
-       relation_qual_17 = (1 + 9) - relation_qual_17,
-       relation_qual_18 = (1 + 9) - relation_qual_18,
-       relation_qual_19 = (1 + 9) - relation_qual_19,
-       relation_qual_20 = (1 + 9) - relation_qual_20,
-       relation_qual_21 = (1 + 9) - relation_qual_21,
-       relation_qual_22 = (1 + 9) - relation_qual_22, 
-       relation_qual_23 = (1 + 9) - relation_qual_23, 
-       relation_qual_24 = (1 + 9) - relation_qual_24, 
-       relation_qual_25 = (1 + 9) - relation_qual_25
-       )
-
+corr.test(select(partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
 ```
 
 
