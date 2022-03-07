@@ -166,7 +166,7 @@ corr.test(select(partners, other.object_1:other.object_10))$r
 # Reverse score anything
 
 ```{r}
-# Relationship Quality Reverse Scoring 13 - 25
+# Relationship Quality Reverse Scoring #14
 
 partners <- partners %>%
 mutate(relation_qual_14 = (1 + 9) - relation_qual_14)
