@@ -73,18 +73,6 @@ partners <- tele %>%
          other.object_10 = as.numeric(gsub("[a-zA-Z]", "", other.object_10))
 
   )
-
-# Changing relationship qual 27 to numeric 
-
-# partners <- partners %>%
-#   mutate(relation_qual_27 =
-#            case_when(
-#              relation_qual_27 == "not too happy" ~ 1,
-#              relation_qual_27 == "pretty happy" ~ 2,
-#              relation_qual_27 == "very happy" ~ 3
-#            )
-#   )
-
 ```
 
 ```{r}
