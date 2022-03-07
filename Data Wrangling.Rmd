@@ -104,12 +104,7 @@ partners <- partners %>%
 
 ```{r}
 
-#corr.test(select(partners, relation_qual_1:relation_qual_25))$r
-
-# Select Relation Qual 25, 23, 20, 19, maybe 17, 15, 14 maybe 12, 3
-# Reverse 14
-
-corr.test(select(partners, relation_qual_3, relation_qual_6, relation_qual_12, relation_qual_14, relation_qual_15, relation_qual_17, relation_qual_19, relation_qual_20, relation_qual_23, relation_qual_25))$r
+corr.test(select(partners, relation_qual_1:relation_qual_25))$r
 
 corr.test(select(partners, self.object_1:self.object_10))$r
 
