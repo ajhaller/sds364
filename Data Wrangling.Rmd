@@ -165,4 +165,5 @@ partners <- partners %>%
 
 ```{r}
 #partners.csv <- write.csv(partners,"sds364\\partners.csv")
+#test
 ```
