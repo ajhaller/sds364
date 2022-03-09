@@ -164,5 +164,5 @@ partners <- partners %>%
 # converting data set to csv file
 
 ```{r}
-partners.csv <- write.csv(partners,"sds364\\partners.csv")
+#partners.csv <- write.csv(partners,"sds364\\partners.csv")
 ```
