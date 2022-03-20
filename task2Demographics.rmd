@@ -1,0 +1,231 @@
+---
+title: "Descriptive Measures Task 2 - Demographics"
+author: "alejandra munoz garcia"
+date: "3/9/2022"
+output: html_document
+---
+
+# Task 2 : Demographics
+ 
+```{r}
+
+library(readr)
+TeleCom_Dyad_premeasures <- read_csv("C:/Program Files/Git/bin/sds364/TeleCom_Dyad_premeasures.csv")
+View(TeleCom_Dyad_premeasures)
+
+```
+
+```{r}
+
+library(psych)
+
+```
+
+
+```{r}
+
+# filtered out same sex couples 
+
+demographics_df <- TeleCom_Dyad_premeasures %>% 
+  
+  select(race, gender, birthday, sexualor, dyadID) %>%
+  
+  filter(dyadID != "29133647",
+         dyadID != "33696006",
+         
+         # ^ actual  same - sex couples 
+         # possible repeats (not couples) are below 
+         
+         dyadID != "29008873", 
+         dyadID != "29373255",  
+         dyadID != "29527988", 
+         dyadID != "32850525",  
+         dyadID != "33363405",  
+         dyadID != "33604743", 
+         dyadID != "33694662")
+
+
+
+```
+
+```{r}
+
+# sample size
+
+total_sample <- 346
+
+dyad_num <- 173
+
+```
+
+
+```{r}
+
+# Gender
+
+demographics_df %>%
+  count(gender)
+
+num_man <- 173 #- 50% 
+
+num_woman <- 173 # - 50%
+
+```
+
+
+
+```{r}
+
+# Race
+
+demographics_df %>%
+  count(race)
+
+asian <- 35  
+# 10%
+
+black <- 22
+# 6%
+
+latinx <- 19
+# 5%
+
+middle_eastern <- 2
+# 1%
+
+other <- 1
+# 1 % 
+
+no_answer <- 4
+# 1%
+
+white <- 259
+# 75%
+
+white_hispanic <- 4
+# 1%
+
+```
+
+```{r}
+
+# Sex
+
+demographics_df %>%
+  count(sexualor)
+
+bisexual <- 8 
+# 2%
+
+heterosexual <- 338
+# 98%
+
+```
+
+
+
+```{r}
+
+# Ages
+
+years_old <- demographics_df %>%
+  count(birthday)
+
+# yr_20_to_29 <- 1
+# 1%
+
+# yr_30_to_35 <- 34
+# 10%
+
+# yr_36_to_40 <- 78
+# 22%
+
+# yr_41_to_45 <- 66
+# 19%
+
+# yr_46_to_50 <- 63
+# 18%
+
+# yr_51_to_55 <- 51
+# 15%
+
+# yr_56_to_60 <- 47 
+# 13%
+
+# yr_61_plus <- 10
+# 2%
+
+```
+
+```{r}
+
+# Exclusion Criteria
+
+#  ## NON HETERO COUPLE IDS
+# 
+# - 29133647 
+#     gay man + gay man 
+#       rows 127 + 128 - only legit one 
+# 
+# - 33696006 
+#     2 women (one bi one hetero)   
+#       341 + 342 
+# 
+# ^ might not be repeat but not sure yet 
+# 
+# 
+#  ## REPEATS ?? 
+# 
+# - 29008873  
+#     heterosexual women
+#        rows 103 +104
+# 
+# - 29373255  
+#     two heterosexual women 
+#       rows 171 + 172
+# 
+# - 29527988  
+#     two heterosexual men 
+#       195 + 196
+# 
+# - 32850525  
+#     two heterosexual women 
+#       301 + 302
+# 
+# - 33363405 
+#     two heterosexual 
+#       323 + 324
+# 
+# - 33604743 
+#     2 men  
+#       329 + 330
+# 
+# - 33694662 
+#     2 women 
+#       rows 339 + 340
+
+
+```
+
+```{r}
+
+## Average & Standard Deviation of Ages 
+
+
+summary(demographics_df)
+
+sum(demographics_df$birthday)
+
+# 15863 = all ages added up
+
+15863 / 346
+
+# average age is 45.8 years (45.84682) 
+
+describe(demographics_df)
+
+# standard deviation = 8
+
+```
+
+---
