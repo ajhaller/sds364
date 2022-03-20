@@ -22,6 +22,7 @@ tele <- read.csv("TeleCom_Dyad_premeasures.csv")
 
 #names(tele)
 #glimpse(tele)
+
 ```
 
 ```{r}
@@ -89,9 +90,31 @@ partners <- tele %>%
 
 ```{r}
 partners <- partners %>%
-  select(dyadID, gender, relation_qual_1, relation_qual_3, relation_qual_5, relation_qual_6, relation_qual_8, relation_qual_9, relation_qual_10, relation_qual_11, relation_qual_12, relation_qual_13, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10)
+  select(dyadID, gender, race, sexualor, birthday, relation_qual_1, relation_qual_3, relation_qual_5, relation_qual_6, relation_qual_8, relation_qual_9, relation_qual_10, relation_qual_11, relation_qual_12, relation_qual_13, self.object_1, self.object_2, self.object_3, self.object_4, self.object_5, self.object_6, self.object_7, self.object_8, self.object_9, self.object_10, other.object_1, other.object_2, other.object_3, other.object_4, other.object_5, other.object_6, other.object_7, other.object_8, other.object_9, other.object_10)
 
 ```
+
+```{r}
+
+# filtered out same sex couples 
+
+partners <- partners %>%
+  filter(dyadID != "29133647",
+         dyadID != "33696006",
+         
+         # ^ actual  same - sex couples 
+         # possible repeats (not couples) are below 
+         
+         dyadID != "29008873", 
+         dyadID != "29373255",  
+         dyadID != "29527988", 
+         dyadID != "32850525",  
+         dyadID != "33363405",  
+         dyadID != "33604743", 
+         dyadID != "33694662")
+
+```
+
 
 ```{r}
 # Filter out NAs and 999
