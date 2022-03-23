@@ -39,7 +39,7 @@ abstract: |
 keywords          : "keywords"
 wordcount         : "X"
 
-bibliography      : ["r-references.bib"]
+bibliography      : ["r-references.bib", "dsc_references.bib"]
 
 floatsintext      : no
 figurelist        : no
