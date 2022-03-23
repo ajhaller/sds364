@@ -232,8 +232,24 @@ describe(demographics_df)
 ```{r}
 library(nlme)
 
-ICC_relation <- gls(relation_qual.avg_A ~ self_object.tavg_A + other_object.tavg_A + self_object.tavg_P + other_object.tavg_P,
+ICC_relation <- gls(relation_qual.avg_A ~ 1,
                    data = pairwise_df,
                    correlation = corCompSymm(form=~1|Dyad_ID),
                    na.action = na.omit)
+
+ICC_relation #rho = 0.6976491
+
+ICC_selfobj <- gls(self_object.tavg_A ~ 1,
+                   data = pairwise_df,
+                   correlation = corCompSymm(form=~1|Dyad_ID),
+                   na.action = na.omit)
+
+ICC_selfobj #rho = 0.2412957
+
+ICC_othobj <- gls(other_object.tavg_A ~ 1,
+                   data = pairwise_df,
+                   correlation = corCompSymm(form=~1|Dyad_ID),
+                   na.action = na.omit)
+
+ICC_othobj # rho = 0.181591
 ```
