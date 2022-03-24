@@ -109,7 +109,7 @@ demo <- as.data.frame(summary(table_one, labelTranslations = my_labels, title = 
 ```
 
 ```{r}
-apa_table(demo, escape = TRUE, font_size = "scriptsize")
+apa_table(demo, escape = TRUE, font_size = "scriptsize", note = "We couldn't figure out how to format it correctly in papaja, but in the rmd it's fine. We will figure this out.")
 ```
 
 
