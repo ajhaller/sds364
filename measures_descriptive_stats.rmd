@@ -109,7 +109,7 @@ demo <- as.data.frame(summary(table_one, labelTranslations = my_labels, title = 
 ```
 
 ```{r}
-apa_table(demo)
+apa_table(demo, escape = TRUE, font_size = "scriptsize")
 ```
 
 
@@ -140,7 +140,7 @@ correlation <- correlation[, c(4, 5, 1, 2, 3)]
 ```
 
 ```{r}
-apa_table(correlation)
+apa_table(correlation, escape = TRUE, font_size = "footnotesize")
 ```
 
 \newpage
