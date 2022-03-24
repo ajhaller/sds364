@@ -16,7 +16,7 @@ affiliation:
 
 bibliography      : ["r-references.bib", "dsc_references.bib"]
 
-floatsintext      : yes
+floatsintext      : no
 figurelist        : no
 tablelist         : no
 footnotelist      : no
