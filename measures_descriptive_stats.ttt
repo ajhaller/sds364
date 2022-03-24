@@ -7,6 +7,8 @@
 
 \caption{\label{tab:unnamed-chunk-4}}
 
+\scriptsize{
+
 \begin{tabular}{llll}
 \toprule
  & \multicolumn{1}{c}{Man (N=173)} & \multicolumn{1}{c}{Woman (N=173)} & \multicolumn{1}{c}{Total (N=346)}\\
@@ -27,7 +29,14 @@
 \&nbsp;\&nbsp;\&nbsp;Bisexual & 2 (1.2\%) & 6 (3.5\%) & 8 (2.3\%)\\
 \&nbsp;\&nbsp;\&nbsp;Heterosexual & 171 (98.8\%) & 167 (96.5\%) & 338 (97.7\%)\\
 \bottomrule
+\addlinespace
 \end{tabular}
+
+}
+
+\begin{tablenotes}[para]
+\normalsize{\textit{Note.} We couldn't figure out how to format it correctly in papaja, but in the rmd it's fine. We will figure this out.}
+\end{tablenotes}
 
 \end{threeparttable}
 \end{center}
@@ -42,6 +51,8 @@
 
 \caption{\label{tab:unnamed-chunk-6}}
 
+\footnotesize{
+
 \begin{tabular}{llllll}
 \toprule
  & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Relationship Quality} & \multicolumn{1}{c}{Self Objectification} & \multicolumn{1}{c}{Other Objectification}\\
@@ -51,6 +62,8 @@ Self Objectification & -1.27 & 2.24 & -0.07 & 1 & \\
 Other Objectification & -0.73 & 2.23 & 0.06 & 0.31 & 1\\
 \bottomrule
 \end{tabular}
+
+}
 
 \end{threeparttable}
 \end{center}
