@@ -52,6 +52,91 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 **Demographics.** Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The participants were asked to complete questionnaires and a daily measure for 14 days. Participants were not compensated for completing the questionnaires but received $2 for every day they completed the daily measures. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%.  The participants’ ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years).
 
+# Table
+
+```{r, include=FALSE}
+library(tidyverse)
+library(arsenal)
+library(Hmisc)
+library(data.table)
+library(readr)
+TeleCom_Dyad_premeasures <- read_csv("TeleCom_Dyad_premeasures.csv")
+pairwise_df <- read_csv("pairwise_df.csv")
+
+```
+
+```{r, warning =FALSE, include=FALSE}
+
+# filtered out same sex couples 
+
+demographics_df <- TeleCom_Dyad_premeasures %>% 
+  
+  select(race, gender, birthday, sexualor, dyadID) %>%
+  
+  filter(dyadID != "29133647",
+         dyadID != "33696006",
+         dyadID != "29008873", 
+         dyadID != "29373255",  
+         dyadID != "29527988", 
+         dyadID != "32850525",  
+         dyadID != "33363405",  
+         dyadID != "33604743", 
+         dyadID != "33694662")
+
+
+
+```
+
+
+```{r, warning = FALSE}
+# Demographics Table
+
+demographics <- demographics_df %>%
+  select(-dyadID) %>% 
+  mutate(gender =
+           case_when(gender == "Man" | gender == "Man,Cis gendered" ~ "Man",
+                     gender == "Woman" | gender == "Woman,Cis gendered" ~ "Woman")
+  )
+
+my_labels <- list(
+  race = "Race",
+  birthday = "Age",
+  sexualor = "Seuxal Orientation"
+)
+
+table_one <- tableby(gender ~ ., data = demographics, test = FALSE) 
+summary(table_one, labelTranslations = my_labels, title = "Demographic Data") 
+```
+
+```{r, warning = FALSE}
+# Correlations between Study Variables
+
+vars <- pairwise_df %>% 
+  select(relation_qual.avg_A, self_object.tavg_A, other_object.tavg_A) %>% 
+  rename("Relationship Quality" = relation_qual.avg_A,
+         "Self Objectification" = self_object.tavg_A,
+         "Other Objectification" = other_object.tavg_A)
+
+cor_table <- round(cor(vars, use="complete.obs"), 2)
+
+cor_table[upper.tri(cor_table)]<-""
+
+correlation <- as.data.frame(cor_table) %>% 
+  mutate(M = 0, SD = 0)
+
+correlation$M[1] <- mean(vars$`Relationship Quality`, na.rm = TRUE)
+correlation$M[2] <- mean(vars$`Self Objectification`, na.rm = TRUE)
+correlation$M[3] <- mean(vars$`Other Objectification`, na.rm = TRUE)
+correlation$SD[1] <- sd(vars$`Relationship Quality`, na.rm = TRUE)
+correlation$SD[2] <- sd(vars$`Self Objectification`, na.rm = TRUE)
+correlation$SD[3] <- sd(vars$`Other Objectification`, na.rm = TRUE)
+
+correlation <- correlation[, c(4, 5, 1, 2, 3)]
+
+correlation
+```
+
+
 \newpage
 
 # References
