@@ -105,8 +105,13 @@ my_labels <- list(
 )
 
 table_one <- tableby(gender ~ ., data = demographics, test = FALSE) 
-summary(table_one, labelTranslations = my_labels, title = "Demographic Data") 
+demo <- as.data.frame(summary(table_one, labelTranslations = my_labels, title = "Demographic Data"))
 ```
+
+```{r}
+apa_table(demo)
+```
+
 
 ```{r, warning = FALSE}
 # Correlations between Study Variables
@@ -132,10 +137,11 @@ correlation$SD[2] <- sd(vars$`Self Objectification`, na.rm = TRUE)
 correlation$SD[3] <- sd(vars$`Other Objectification`, na.rm = TRUE)
 
 correlation <- correlation[, c(4, 5, 1, 2, 3)]
-
-correlation
 ```
 
+```{r}
+apa_table(correlation)
+```
 
 \newpage
 

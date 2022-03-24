@@ -2,7 +2,9 @@
 title: "DS Tables & Figures"
 author: "Aushanae Haller"
 date: '2022-03-23'
-output: html_document
+output:
+  pdf_document: default
+  html_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -37,7 +39,8 @@ table_one <- tableby(gender ~ ., data = demographics, test = FALSE)
 summary(table_one, labelTranslations = my_labels, title = "Demographic Data") 
 ```
 
-```{r}
+
+```{corr}
 # Correlations between Study Variables
 
 vars <- pairwise_df %>% 

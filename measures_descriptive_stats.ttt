@@ -1,0 +1,58 @@
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:unnamed-chunk-4}}
+
+\begin{tabular}{llll}
+\toprule
+ & \multicolumn{1}{c}{Man (N=173)} & \multicolumn{1}{c}{Woman (N=173)} & \multicolumn{1}{c}{Total (N=346)}\\
+\midrule
+**Race** &  &  & \\
+\&nbsp;\&nbsp;\&nbsp;Asian or Asian American & 15 (8.7\%) & 20 (11.6\%) & 35 (10.1\%)\\
+\&nbsp;\&nbsp;\&nbsp;Black or African American & 11 (6.4\%) & 11 (6.4\%) & 22 (6.4\%)\\
+\&nbsp;\&nbsp;\&nbsp;Latinx or Hispanic & 10 (5.8\%) & 9 (5.2\%) & 19 (5.5\%)\\
+\&nbsp;\&nbsp;\&nbsp;Middle Eastern & 0 (0.0\%) & 2 (1.2\%) & 2 (0.6\%)\\
+\&nbsp;\&nbsp;\&nbsp;Other & 0 (0.0\%) & 1 (0.6\%) & 1 (0.3\%)\\
+\&nbsp;\&nbsp;\&nbsp;Prefer not to answer & 3 (1.7\%) & 1 (0.6\%) & 4 (1.2\%)\\
+\&nbsp;\&nbsp;\&nbsp;White or European American & 132 (76.3\%) & 127 (73.4\%) & 259 (74.9\%)\\
+\&nbsp;\&nbsp;\&nbsp;White or European American,Latinx or Hispanic & 2 (1.2\%) & 2 (1.2\%) & 4 (1.2\%)\\
+**Age** &  &  & \\
+\&nbsp;\&nbsp;\&nbsp;Mean (SD) & 46.890 (8.790) & 44.803 (7.743) & 45.847 (8.337)\\
+\&nbsp;\&nbsp;\&nbsp;Range & 26.000 - 74.000 & 30.000 - 65.000 & 26.000 - 74.000\\
+**Seuxal Orientation** &  &  & \\
+\&nbsp;\&nbsp;\&nbsp;Bisexual & 2 (1.2\%) & 6 (3.5\%) & 8 (2.3\%)\\
+\&nbsp;\&nbsp;\&nbsp;Heterosexual & 171 (98.8\%) & 167 (96.5\%) & 338 (97.7\%)\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:unnamed-chunk-6}}
+
+\begin{tabular}{llllll}
+\toprule
+ & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Relationship Quality} & \multicolumn{1}{c}{Self Objectification} & \multicolumn{1}{c}{Other Objectification}\\
+\midrule
+Relationship Quality & 7.43 & 1.50 & 1 &  & \\
+Self Objectification & -1.27 & 2.24 & -0.07 & 1 & \\
+Other Objectification & -0.73 & 2.23 & 0.06 & 0.31 & 1\\
+\bottomrule
+\end{tabular}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}
