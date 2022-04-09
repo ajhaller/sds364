@@ -1,0 +1,284 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+  english,
+  man]{apa6}
+\title{Introduction}
+\author{Vivian Almaraz\textsuperscript{1}, AJ Haller\textsuperscript{1}, \& Alejandra Munoz\textsuperscript{1}}
+\date{}
+
+\usepackage{amsmath,amssymb}
+\usepackage{lmodern}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdftitle={Introduction},
+  pdfauthor={Vivian Almaraz1, AJ Haller1, \& Alejandra Munoz1},
+  pdflang={en-EN},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+% Make \paragraph and \subparagraph free-standing
+\ifx\paragraph\undefined\else
+  \let\oldparagraph\paragraph
+  \renewcommand{\paragraph}[1]{\oldparagraph{#1}\mbox{}}
+\fi
+\ifx\subparagraph\undefined\else
+  \let\oldsubparagraph\subparagraph
+  \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
+\fi
+\newlength{\cslhangindent}
+\setlength{\cslhangindent}{1.5em}
+\newlength{\csllabelwidth}
+\setlength{\csllabelwidth}{3em}
+\newlength{\cslentryspacingunit} % times entry-spacing
+\setlength{\cslentryspacingunit}{\parskip}
+\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
+ {% don't indent paragraphs
+  \setlength{\parindent}{0pt}
+  % turn on hanging indent if param 1 is 1
+  \ifodd #1
+  \let\oldpar\par
+  \def\par{\hangindent=\cslhangindent\oldpar}
+  \fi
+  % set entry spacing
+  \setlength{\parskip}{#2\cslentryspacingunit}
+ }%
+ {}
+\usepackage{calc}
+\newcommand{\CSLBlock}[1]{#1\hfill\break}
+\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
+\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
+\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
+% Manuscript styling
+\usepackage{upgreek}
+\captionsetup{font=singlespacing,justification=justified}
+
+% Table formatting
+\usepackage{longtable}
+\usepackage{lscape}
+% \usepackage[counterclockwise]{rotating}   % Landscape page setup for large tables
+\usepackage{multirow}		% Table styling
+\usepackage{tabularx}		% Control Column width
+\usepackage[flushleft]{threeparttable}	% Allows for three part tables with a specified notes section
+\usepackage{threeparttablex}            % Lets threeparttable work with longtable
+
+% Create new environments so endfloat can handle them
+% \newenvironment{ltable}
+%   {\begin{landscape}\centering\begin{threeparttable}}
+%   {\end{threeparttable}\end{landscape}}
+\newenvironment{lltable}{\begin{landscape}\centering\begin{ThreePartTable}}{\end{ThreePartTable}\end{landscape}}
+
+% Enables adjusting longtable caption width to table width
+% Solution found at http://golatex.de/longtable-mit-caption-so-breit-wie-die-tabelle-t15767.html
+\makeatletter
+\newcommand\LastLTentrywidth{1em}
+\newlength\longtablewidth
+\setlength{\longtablewidth}{1in}
+\newcommand{\getlongtablewidth}{\begingroup \ifcsname LT@\roman{LT@tables}\endcsname \global\longtablewidth=0pt \renewcommand{\LT@entry}[2]{\global\advance\longtablewidth by ##2\relax\gdef\LastLTentrywidth{##2}}\@nameuse{LT@\roman{LT@tables}} \fi \endgroup}
+
+% \setlength{\parindent}{0.5in}
+% \setlength{\parskip}{0pt plus 0pt minus 0pt}
+
+% \usepackage{etoolbox}
+\makeatletter
+\patchcmd{\HyOrg@maketitle}
+  {\section{\normalfont\normalsize\abstractname}}
+  {\section*{\normalfont\normalsize\abstractname}}
+  {}{\typeout{Failed to patch abstract.}}
+\patchcmd{\HyOrg@maketitle}
+  {\section{\protect\normalfont{\@title}}}
+  {\section*{\protect\normalfont{\@title}}}
+  {}{\typeout{Failed to patch title.}}
+\makeatother
+\shorttitle{Title}
+\DeclareDelayedFloatFlavor{ThreePartTable}{table}
+\DeclareDelayedFloatFlavor{lltable}{table}
+\DeclareDelayedFloatFlavor*{longtable}{table}
+\makeatletter
+\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
+\makeatother
+\usepackage{csquotes}
+\ifXeTeX
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\else
+  \usepackage[main=english]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
+\ifLuaTeX
+  \usepackage{selnolig}  % disable illegal ligatures
+\fi
+
+
+\affiliation{\vspace{0.5cm}\textsuperscript{1} Smith College}
+
+\begin{document}
+\maketitle
+
+According to objectification theory, women are more socialized than men to internalize the observer's perspective, narrowing themselves to their bodies and their physical appearance (Fredrickson and Roberts (1997)). This internalization of the observer's perspective may be related to a woman hyper-focusing on her own appearance, and the objectification of herself. Research shows that self objectification and partner objectification are highly associated with one another (Zurbriggen, Ramsey, and Jaworski (2011)). This creates sexual pressure for women in relationships (Ramsey and Hoyt (2015)). Yet many studies have shown that objectification within heterosexual relationships often negatively affects both partners' relationship satisfaction (Mahar, Webster, and Markey (2020); Ramsey and Hoyt (2015); Ramsey, Marotta, and Hoyt (2017); Sáez, Riemer, Brock, and Gervais (2019)). Our study aims to explore the differences in objectification between partners in heterosexual relationships and how this influences each partner's relationship satisfaction.
+We believe that the association between relationship satisfaction and the objectification of an individual's partner is dependent on self objectification. Levels of self esteem influences individuals perceptions of themselves and their self objectification, and this perceived self regard predicts less relationship satisfaction (Sciangula and Morry (2009)). There are many negative implications of objectification, which include negatively impacting woman's mental health (Fredrickson and Roberts (1997)). Since objectification in relationships is often overlooked in psychological research, we are attempting to understand how variances in objectification between both partners relates to relationship satisfaction.
+
+In this study, we demonstrated this with dyadic analyses that considered each individual's objectification of themselves, the degree to which each individual objectifies their partner, and each partner's relationship satisfaction. Not many studies include perspective from both partners in a relationship, and not many studies consider both an individual's objectification of themselves and the objectification of the partner. We believe that this is the first study to take a dyadic approach to researching how both self and other objectification explains relationship satisfaction among heterosexual relationships across gender. We hope that our research can provide insight as to how men and women objectify themselves and their partner differently, and how this explains their own satisfaction in their relationship.
+
+\hypertarget{summarize-previous-research}{%
+\section{Summarize Previous Research}\label{summarize-previous-research}}
+
+A large majority of prior studies supporting a relationship between objectification and relationship satisfaction focus exclusively on these effects on women, with other women or men acting as the objectifier. However, in contrast with Objectification Theory, prior studies seem to be relatively divided in the effects of objectification on women when it occurs in the context of a relationship. Along the lines of Objectification Theory, some literature concluded that women perceive their partner as less likable, are less likely to affiliate with their partner (Teng, Chen, Poon, and Zhang (2015)), are more likely to body shame (Ramsey and Hoyt (2015)) and have decreased relationship, body, and sexual satisfaction (Sáez et al. (2019)) following sexual objectification from their partner. Alternative literature suggested the effect of objectification on women depends on the circumstances and/or scenario a woman finds herself in, such as findings that concluded a husbands' sexual valuation was negatively associated with women's marital satisfaction when the husband's commitment was less than the average but positively correlated when husband's commitment was higher than the average (Meltzer, McNulty, and Maner (2017), Meltzer and McNulty (2014)); in another scenario observed in heterosexual relationships, a partner's comments were perceived as the least objectifying and enjoyed the most by women, while comments from colleagues, strangers and friends were associated with greater objectification and less enjoyment (Lameiras-Fernández, Fiske, Fernández, and Lopez (2018)).
+
+Nevertheless, longitudinal studies may offer insight into a different approach to evaluating the effects of objectification. For example, in a longitudinal study, women reported every time their partner drew attention to their sexuality or appearance, and their appearance and self-esteem every few months for a year, while their husbands reported the extent to which they sexually and physically valued their wives. The findings showed that sexual and physical valuation is not inherently beneficial or harmful to women, and it depends on the relationship context (Meltzer (2020)). Accordingly, the goal of the current research is to consider other variables we believe contribute to aforementioned relationship context, in relation to the effects of objectification, such as self-objectification and gender in a dyadic model.
+
+Self-objectification consistently serves as an important factor of relationship satisfaction in heterosexual relationships, so much so, that the more individuals within a partnership self-objectify, the lower they judge the quality of the relationship (Strelan and Pagoudis (2018)), and those who self objectify also objectify others (Strelan and Hargreaves (2005)). Additionally, objectifying both the self and the partner were highly associated with one another (Zurbriggen et al. (2011)). For this reason, the current study goes beyond past studies by giving self-objectification a mediating role in its model. Moreover, while we recognize that for both men and women, individuals that objectify their partners had lower levels of relationship satisfaction (Mahar et al. (2020)), we also recognize the emphasis Objectification Theory places on women and the consequential societal pressures only women face when objectified.
+
+For example, women still tend to feel guilty or body shame themselves if they enjoy being sexualized (Visser, Sultani, Choma, and Pozzebon (2014)), are more likely to feel objectified if they enjoy sexualization (Ramsey et al. (2017)), and experience more body surveillance, body shame, and body dissatisfaction than men (Gervais, Vescio, and Allen (2011), Choma et al. (2010)). Women are also more cognizant of self-objectification within others (Newheiser, LaFrance, and Dovidio (2010)) and are more affected in their current relationship by previous encounters of objectification (Terán, Jiao, and Aubrey (2021)) than men. We further acknowledge, however, that although men may experience the effects of objectification to a lesser extent, these effects are relevant, and still worth exploring; such as the negative relationship between self-objectification and social and romantic relationship pathways for men (Cole, Davidson, and Gervais (2013)). Accordingly, the current study assesses the role of gender in the relationship between objectification and relationship satisfaction; but remains novel by applying the moderating role of gender on the aforementioned mediated model.
+
+\hypertarget{the-current-research}{%
+\section{The Current Research}\label{the-current-research}}
+
+Previous research has shown the effects self-objectification has on the objectification of others and how objectification can influence body satisfaction within couples, but relationship satisfaction in relation to self and other objectification is not studied too often. It has been found that both men and women who self-objectify have higher tendencies of objectifying others. Higher self and other objectification have a strong correlation with lower body satisfaction in women, but the same cannot be said for men (Strelan and Hargreaves (2005)). We believe other objectification could also strongly affect relationship satisfaction in women. Our study aims to determine the amount of influence self and other objectification has on both partners' individual relationship satisfaction. We hypothesize that women's objectification of her partner will have a stronger correlation with her relationship satisfaction compared to the correlation men's objectification will have with men's satisfaction.
+
+Research shows that self-sexualization in women poses the risk of them being objectified by others (Visser et al. (2014)). However, men generally have not been objectified to the same extent that women have, indicating that men might be able to enjoy the effects of self-sexualization without being fearful of the consequences women endure when treated as sex objects. However, although men are not objectified to the same extent as women, we believe that men are objectified enough to negatively affect their relationship satisfaction. Because of this, we hypothesize that the woman's objectification of their male partner will negatively correlate with the man's relationship satisfaction; and vice versa.
+
+Couples with high self-esteem showed higher levels of relationship satisfaction (Sciangula and Morry (2009)). If women's self-objectification leads to self-deprecation, resulting in low self-esteem, there could be a negative correlation with relationship satisfaction. Because of this, we suspect that a woman's self-objectification will correlate negatively with relationship satisfaction for both her and her partner, however we do not believe that men's self-objectification will have a negative impact on his own relationship satisfaction or that of his partners.
+
+\hypertarget{hypotheses}{%
+\section{Hypotheses}\label{hypotheses}}
+
+\begin{enumerate}
+\def\labelenumi{\arabic{enumi}.}
+\item
+  High levels of partner objectification are associated with lower levels of relationship satisfaction for both men and women.
+\item
+  There is a stronger association between partner objectification and relationship satisfaction for women than for men in heterosexual relationships.
+\item
+  The association between man's objectification of his partner and the partner's relationship satisfaction is dependent on a woman's objectification of herself.
+\item
+  The association between a woman's objectification of her partner and the partner's relationship satisfaction is dependent on a man's objectification of himself.
+\end{enumerate}
+
+\newpage
+
+\hypertarget{references}{%
+\section{References}\label{references}}
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+\hypertarget{refs}{}
+\begin{CSLReferences}{1}{0}
+\leavevmode\vadjust pre{\hypertarget{ref-choma2010self}{}}%
+Choma, B. L., Visser, B. A., Pozzebon, J. A., Bogaert, A. F., Busseri, M. A., \& Sadava, S. W. (2010). Self-objectification, self-esteem, and gender: Testing a moderated mediation model. \emph{Sex Roles}, \emph{63}(9), 645--656.
+
+\leavevmode\vadjust pre{\hypertarget{ref-cole2013body}{}}%
+Cole, B. P., Davidson, M. M., \& Gervais, S. J. (2013). Body surveillance and body shame in college men: Are men who self-objectify less hopeful? \emph{Sex Roles}, \emph{69}(1), 29--41.
+
+\leavevmode\vadjust pre{\hypertarget{ref-fredrickson1997objectification}{}}%
+Fredrickson, B. L., \& Roberts, T.-A. (1997). Objectification theory: Toward understanding women's lived experiences and mental health risks. \emph{Psychology of Women Quarterly}, \emph{21}(2), 173--206.
+
+\leavevmode\vadjust pre{\hypertarget{ref-gervais2011you}{}}%
+Gervais, S. J., Vescio, T. K., \& Allen, J. (2011). When what you see is what you get: The consequences of the objectifying gaze for women and men. \emph{Psychology of Women Quarterly}, \emph{35}(1), 5--17.
+
+\leavevmode\vadjust pre{\hypertarget{ref-lameiras2018objectifying}{}}%
+Lameiras-Fernández, M., Fiske, S. T., Fernández, A. G., \& Lopez, J. F. (2018). Objectifying women's bodies is acceptable from an intimate perpetrator, at least for female sexists. \emph{Sex Roles}, \emph{79}(3), 190--205.
+
+\leavevmode\vadjust pre{\hypertarget{ref-mahar2020partner}{}}%
+Mahar, E. A., Webster, G. D., \& Markey, P. M. (2020). Partner--objectification in romantic relationships: A dyadic approach. \emph{Personal Relationships}, \emph{27}(1), 4--26.
+
+\leavevmode\vadjust pre{\hypertarget{ref-meltzer2020women}{}}%
+Meltzer, A. L. (2020). Women can benefit from sexual and physical valuation in the context of a romantic relationship. \emph{Personality and Social Psychology Bulletin}, \emph{46}(2), 243--257.
+
+\leavevmode\vadjust pre{\hypertarget{ref-meltzer2014tell}{}}%
+Meltzer, A. L., \& McNulty, J. K. (2014). {``Tell me i'm sexy... And otherwise valuable''}: Body valuation and relationship satisfaction. \emph{Personal Relationships}, \emph{21}(1), 68--87.
+
+\leavevmode\vadjust pre{\hypertarget{ref-meltzer2017women}{}}%
+Meltzer, A. L., McNulty, J. K., \& Maner, J. K. (2017). Women like being valued for sex, as long as it is by a committed partner. \emph{Archives of Sexual Behavior}, \emph{46}(2), 475--488.
+
+\leavevmode\vadjust pre{\hypertarget{ref-newheiser2010others}{}}%
+Newheiser, A.-K., LaFrance, M., \& Dovidio, J. F. (2010). Others as objects: How women and men perceive the consequences of self-objectification. \emph{Sex Roles}, \emph{63}(9), 657--671.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ramsey2015object}{}}%
+Ramsey, L. R., \& Hoyt, T. (2015). The object of desire: How being objectified creates sexual pressure for women in heterosexual relationships. \emph{Psychology of Women Quarterly}, \emph{39}(2), 151--170.
+
+\leavevmode\vadjust pre{\hypertarget{ref-ramsey2017sexualized}{}}%
+Ramsey, L. R., Marotta, J. A., \& Hoyt, T. (2017). Sexualized, objectified, but not satisfied: Enjoying sexualization relates to lower relationship satisfaction through perceived partner-objectification. \emph{Journal of Social and Personal Relationships}, \emph{34}(2), 258--278.
+
+\leavevmode\vadjust pre{\hypertarget{ref-saez2019objectification}{}}%
+Sáez, G., Riemer, A. R., Brock, R. L., \& Gervais, S. J. (2019). Objectification in heterosexual romantic relationships: Examining relationship satisfaction of female objectification recipients and male objectifying perpetrators. \emph{Sex Roles}, \emph{81}(5), 370--384.
+
+\leavevmode\vadjust pre{\hypertarget{ref-sciangula2009self}{}}%
+Sciangula, A., \& Morry, M. M. (2009). Self-esteem and perceived regard: How i see myself affects my relationship satisfaction. \emph{The Journal of Social Psychology}, \emph{149}(2), 143--158.
+
+\leavevmode\vadjust pre{\hypertarget{ref-strelan2005women}{}}%
+Strelan, P., \& Hargreaves, D. (2005). Women who objectify other women: The vicious circle of objectification? \emph{Sex Roles}, \emph{52}(9), 707--712.
+
+\leavevmode\vadjust pre{\hypertarget{ref-strelan2018birds}{}}%
+Strelan, P., \& Pagoudis, S. (2018). Birds of a feather flock together: The interpersonal process of objectification within intimate heterosexual relationships. \emph{Sex Roles}, \emph{79}(1), 72--82.
+
+\leavevmode\vadjust pre{\hypertarget{ref-teng2015sexual}{}}%
+Teng, F., Chen, Z., Poon, K.-T., \& Zhang, D. (2015). Sexual objectification pushes women away: The role of decreased likability. \emph{European Journal of Social Psychology}, \emph{45}(1), 77--87.
+
+\leavevmode\vadjust pre{\hypertarget{ref-teran2021relational}{}}%
+Terán, L., Jiao, J., \& Aubrey, J. S. (2021). The relational burden of objectification: Exploring how past experiences of interpersonal sexual objectification are related to relationship competencies. \emph{Sex Roles}, \emph{84}(9), 610--625.
+
+\leavevmode\vadjust pre{\hypertarget{ref-visser2014enjoyment}{}}%
+Visser, B. A., Sultani, F., Choma, B. L., \& Pozzebon, J. A. (2014). Enjoyment of sexualization: Is it different for men? \emph{Journal of Applied Social Psychology}, \emph{44}(7), 495--504.
+
+\leavevmode\vadjust pre{\hypertarget{ref-zurbriggen2011self}{}}%
+Zurbriggen, E. L., Ramsey, L. R., \& Jaworski, B. K. (2011). Self-and partner-objectification in romantic relationships: Associations with media consumption and relationship satisfaction. \emph{Sex Roles}, \emph{64}(7), 449--462.
+
+\end{CSLReferences}
+
+\endgroup
+
+
+\end{document}
