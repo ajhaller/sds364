@@ -1,6 +1,5 @@
 ---
 title             : "Introduction"
-shorttitle        : "Title"
 
 author: 
   - name          : "Vivian Almaraz"
