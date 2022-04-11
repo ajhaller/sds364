@@ -184,6 +184,17 @@ partners <- partners %>%
   select(-c(relation_qual_1, relation_qual_3, relation_qual_5, relation_qual_6, relation_qual_8, relation_qual_9, relation_qual_10, relation_qual_11, relation_qual_12, relation_qual_13))
 ```
 
+```{r}
+partners <- partners %>% 
+  mutate(gender = 
+           case_when(gender == "Woman" ~ 0,
+                     gender == "Man" ~ 1,
+                     gender == "Woman,Cis gendered" ~ 0,
+                     gender == "Man,Cis gendered" ~ 1)
+         )
+```
+
+
 # converting data set to csv file
 
 ```{r}
