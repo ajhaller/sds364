@@ -187,9 +187,9 @@ partners <- partners %>%
 ```{r}
 partners <- partners %>% 
   mutate(gender = 
-           case_when(gender == "Woman" ~ 0,
+           case_when(gender == "Woman" ~ -1,
                      gender == "Man" ~ 1,
-                     gender == "Woman,Cis gendered" ~ 0,
+                     gender == "Woman,Cis gendered" ~ -1,
                      gender == "Man,Cis gendered" ~ 1)
          )
 ```
