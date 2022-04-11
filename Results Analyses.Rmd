@@ -9,3 +9,39 @@ output: html_document
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+```{r}
+# Loading in the dataset
+library(tidyverse)
+library(nlme)
+
+pairwise <- read.csv("pairwise.csv")
+```
+
+```{r}
+pairwise <- pairwise %>%
+  rename(self_object_A = self_object.tavg_A, 
+         other_object_A = other_object.tavg_A,
+         relation_sat_A = relation_qual.avg_A,
+         self_object_P = self_object.tavg_P,
+         other_object_P = other_object.tavg_P,
+         relation_sat_P = relation_qual.avg_P) %>%
+  select(Dyad_ID, partnum, gender_A, self_object_A, other_object_A, relation_sat_A, self_object_P, other_object_P, relation_sat_P)
+```
+
+##The Four Baron & Kenny Steps Using Multilevel Modeling
+
+###Step 1: Estimating and testing the total effect (c) of Other Objectification on Relationship Satisfaction (Y)
+
+y ~x fives us c
+
+Value = c
+
+```{r}
+apim_stp1 <- gls(relation_sat_A ~ gender_A + other_object_A:gender_A + other_object_P:gender_A - 1, # two intercept model for variables, -1 is to make sure that we have two separate intercepts for husband and wife
+                 data = pairwise,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+summary(apim_stp1)
+```
