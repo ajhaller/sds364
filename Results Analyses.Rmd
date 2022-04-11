@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE)
 library(tidyverse)
 library(nlme)
 
-pairwise <- read.csv("pairwise.csv")
+pairwise <- read.csv("pairwise2.csv")
 ```
 
 ```{r}
@@ -25,7 +25,8 @@ pairwise <- pairwise %>%
          self_object_P = self_object.tavg_P,
          other_object_P = other_object.tavg_P,
          relation_sat_P = relation_qual.avg_P) %>%
-  select(Dyad_ID, partnum, gender_A, self_object_A, other_object_A, relation_sat_A, self_object_P, other_object_P, relation_sat_P)
+  mutate(gender_AF = ifelse(gender_A == 1, "man", "woman")) %>%
+  select(Dyad_ID, partnum, gender_A, gender_AF, self_object_A, other_object_A, relation_sat_A, self_object_P, other_object_P, relation_sat_P)
 ```
 
 ##The Four Baron & Kenny Steps Using Multilevel Modeling
@@ -37,11 +38,44 @@ y ~x fives us c
 Value = c
 
 ```{r}
-apim_stp1 <- gls(relation_sat_A ~ gender_A + other_object_A:gender_A + other_object_P:gender_A - 1, # two intercept model for variables, -1 is to make sure that we have two separate intercepts for husband and wife
+apim_stp1 <- gls(relation_sat_A ~ gender_AF + other_object_A:gender_AF + other_object_P:gender_AF - 1, # two intercept model for variables, -1 is to make sure that we have two separate intercepts for husband and wife
                  data = pairwise,
                  correlation = corCompSymm(form=~1|Dyad_ID), 
                  weights = varIdent(form=~1|gender_A), 
                  na.action = na.omit)
 
 summary(apim_stp1)
+```
+
+###Step 2: Testing the effects of the Other Objectification (X) on the mediators of Wife and Husband Self Objectification (M).
+
+Is the mediator predicted by x? so now tension is out response variable
+M ~ X gives us a
+
+Value = a paths for mediation
+
+```{r}
+apim_stp2 <- gls(self_object_A ~ gender_AF + other_object_A:gender_AF + other_object_P:gender_AF - 1,
+                 data = pairwise,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+summary(apim_stp2)
+```
+
+###Steps 3 and 4: Testing the effects of the Self Objectification (M) and Other Objectficiation (X) on the RelationshipSatisfaction (Y). 
+
+Y ~ X + M gives us bc'
+(X gives us c' and M gives us b)
+
+```{r}
+apim_stp3 <- gls(relation_sat_A ~ gender_AF + other_object_A:gender_AF + other_object_P:gender_AF 
+                 + self_object_A:gender_AF + self_object_P:gender_AF - 1,
+                 data = pairwise,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+summary(apim_stp3)
 ```
