@@ -3,6 +3,8 @@ title: "Results Analyses"
 author: "Vivian Almaraz"
 date: '2022-04-04'
 output: html_document
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include=FALSE}
@@ -64,7 +66,7 @@ apim_stp2 <- gls(self_object_A ~ gender_AF + other_object_A:gender_AF + other_ob
 summary(apim_stp2)
 ```
 
-###Steps 3 and 4: Testing the effects of the Self Objectification (M) and Other Objectficiation (X) on the RelationshipSatisfaction (Y). 
+###Steps 3 and 4: Testing the effects of the Self Objectification (M) and Other Objectficiation (X) on the Relationship Satisfaction (Y). 
 
 Y ~ X + M gives us bc'
 (X gives us c' and M gives us b)
@@ -79,3 +81,171 @@ apim_stp3 <- gls(relation_sat_A ~ gender_AF + other_object_A:gender_AF + other_o
 
 summary(apim_stp3)
 ```
+
+
+#Testing Indirect Effects Using Multilevel Modeling
+
+##Sobel Test
+
+```{r}
+
+sobel <- function(aval, bval, seA, seB){
+  
+  ab <- aval*bval
+  ab_se <- sqrt(aval^2*seB^2+bval^2*seA^2)
+  z <- ab/ab_se
+  p <- 2*pnorm(z, lower.tail=FALSE)
+  
+  return(data.frame(indirect_effect = ab, z_value = z, p_value = p))
+   
+}
+```
+
+```{r}
+# mans self & other object A
+
+act_H_a <- coef(summary(apim_stp2))[3,1]
+act_H_a_se <- coef(summary(apim_stp2))[3,2]
+act_H_b <- coef(summary(apim_stp3))[7,1]
+act_H_b_se <- coef(summary(apim_stp3))[7,2]
+
+sobel(act_H_a, act_H_b, act_H_a_se, act_H_b_se)
+```
+
+```{r}
+
+# womans self & other object A
+
+act_W_a <- coef(summary(apim_stp2))[4,1]
+act_W_a_se <- coef(summary(apim_stp2))[4,2]
+act_W_b <- coef(summary(apim_stp3))[8,1]
+act_W_b_se <- coef(summary(apim_stp3))[8,2]
+
+sobel(act_W_a, act_W_b, act_W_a_se, act_W_b_se)
+
+```
+
+```{r}
+# mans self & other object P
+
+act_H_p <- coef(summary(apim_stp2))[5,1]
+act_H_p_se <- coef(summary(apim_stp2))[5,2]
+act_H_b_p <- coef(summary(apim_stp3))[9,1]
+act_H_b_p_se <- coef(summary(apim_stp3))[9,2]
+
+sobel(act_H_p, act_H_b_p, act_H_p_se, act_H_b_p_se)
+
+
+```
+
+```{r}
+# womans self & other object P 
+
+act_W_p <- coef(summary(apim_stp2))[6,1]
+act_W_p_se <- coef(summary(apim_stp2))[6,2]
+act_W_b_p <- coef(summary(apim_stp3))[10,1]
+act_W_b_p_se <- coef(summary(apim_stp3))[10,2]
+
+sobel(act_W_p, act_W_b_p, act_W_p_se, act_W_b_p_se)
+
+```
+
+
+##MCMAM (MonteCarlo Method) [Selig & Preacher, 2008](http://www.quantpsy.org/medmc/medmc.htm)
+
+```{r}
+#Function that returns mcmc CI. 
+mcmamCI <- function(aval, bval, varA, varB, n){
+
+#code (Selig & Preacher, 2008).
+  require(MASS)
+  
+  a=aval
+  b=bval
+  rep=n
+  conf=95
+  pest=c(a,b)
+  acov <- matrix(c(varA, 0, 0, varB),2,2)
+
+  mcmc <- mvrnorm(rep,pest,acov,empirical=FALSE)
+
+  ab <- mcmc[,1]*mcmc[,2]
+
+  low=(1-conf/100)/2
+  upp=((1-conf/100)/2)+(conf/100)
+
+  LL=quantile(ab,low)
+  UL=quantile(ab,upp)
+  LL=format(LL,digits=3)
+  UL=format(UL,digits=3)
+
+  CI <- cbind.data.frame(LL, UL)
+  return(CI)
+
+}
+```
+
+```{r}
+# mans self & other object A
+
+act_H_a <- coef(summary(apim_stp2))[3,1]
+act_H_a_se <- coef(summary(apim_stp2))[3,2]
+act_H_b <- coef(summary(apim_stp3))[7,1]
+act_H_b_se <- coef(summary(apim_stp3))[7,2]
+
+mcmamCI(act_H_a, act_H_b, act_H_a_se^2, act_H_b_se^2, 3000)
+
+```
+
+```{r}
+
+# womans self & other object A
+
+act_W_a <- coef(summary(apim_stp2))[4,1]
+act_W_a_se <- coef(summary(apim_stp2))[4,2]
+act_W_b <- coef(summary(apim_stp3))[8,1]
+act_W_b_se <- coef(summary(apim_stp3))[8,2]
+
+mcmamCI(act_W_a, act_W_b, act_W_a_se^2, act_W_b_se^2, 3000)
+
+```
+
+```{r}
+# mans self & other object P
+
+act_H_p <- coef(summary(apim_stp2))[5,1]
+act_H_p_se <- coef(summary(apim_stp2))[5,2]
+act_H_b_p <- coef(summary(apim_stp3))[9,1]
+act_H_b_p_se <- coef(summary(apim_stp3))[9,2]
+
+mcmamCI(act_H_p, act_H_b_p, act_H_p_se^2, act_H_b_p_se^2, 3000)
+
+```
+
+```{r}
+# womans self & other object P 
+
+act_W_p <- coef(summary(apim_stp2))[6,1]
+act_W_p_se <- coef(summary(apim_stp2))[6,2]
+act_W_b_p <- coef(summary(apim_stp3))[10,1]
+act_W_b_p_se <- coef(summary(apim_stp3))[10,2]
+
+mcmamCI(act_W_p, act_W_b_p, act_W_p_se^2, act_W_b_p_se^2, 3000)
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
