@@ -1,0 +1,57 @@
+---
+title             : "Results"
+shorttitle        : "Results"
+
+author: 
+  - name          : "Vivian Almaraz"
+    affiliation   : "1"
+  - name          : "AJ Haller"
+    affiliation   : "1"
+  - name          : "Alejandra Munoz"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Smith College"
+
+bibliography      : ["r-references.bib"]
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+# Results
+
+```{r}
+knitr::include_graphics("/Desktop/sds364/hypothesis_model_results.png")
+```
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
