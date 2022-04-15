@@ -1,0 +1,7 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Images/hypothesis_model_results.png}
+\caption{The Moderated Mediation Model}
+\end{figure*}
