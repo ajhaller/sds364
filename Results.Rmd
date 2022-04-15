@@ -41,9 +41,7 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Results
 
-```{r}
-knitr::include_graphics("/Desktop/sds364/hypothesis_model_results.png")
-```
+![The Moderated Mediation Model](Images/hypothesis_model_results.png)
 
 \newpage
 
