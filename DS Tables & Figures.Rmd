@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-```{r}
+```{r, include=FALSE}
 library(tidyverse)
 library(arsenal)
 library(Hmisc)
@@ -40,14 +40,14 @@ summary(table_one, labelTranslations = my_labels, title = "Demographic Data")
 ```
 
 
-```{corr}
+```{r}
 # Correlations between Study Variables
 
-vars <- pairwise_df %>% 
-  select(relation_qual.avg_A, self_object.tavg_A, other_object.tavg_A) %>% 
-  rename("Relationship Quality" = relation_qual.avg_A,
-         "Self Objectification" = self_object.tavg_A,
-         "Other Objectification" = other_object.tavg_A)
+vars <- pairwise %>% 
+  select(relation_sat_A, self_object_A, other_object_A) %>% 
+  rename("Relationship Quality" = relation_sat_A,
+         "Self Objectification" = self_object_A,
+         "Other Objectification" = other_object_A)
 
 cor_table <- round(cor(vars, use="complete.obs"), 2)
 
@@ -66,5 +66,56 @@ correlation$SD[3] <- sd(vars$`Other Objectification`, na.rm = TRUE)
 correlation <- correlation[, c(4, 5, 1, 2, 3)]
 
 correlation
+```
+
+```{r, include=FALSE}
+library(sjPlot)
+
+pairwise_Nice <- pairwise %>%
+  rename(Relationship_Satisfaction_Actor = relation_sat_A,
+         Gender = gender_AF,
+         Self_Objectification_Actor = self_object_A, 
+         Other_Objectification_Actor = other_object_A,
+         Self_Objectification_Partner = self_object_P, 
+         Other_Objectification_Partner = other_object_P,)
+
+apim_stp1 <- gls(Relationship_Satisfaction_Actor ~ Gender + 
+                   Other_Objectification_Actor:Gender + 
+                   Other_Objectification_Partner:Gender - 1,
+                 data = pairwise_Nice,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+apim_stp2 <- gls(Self_Objectification_Actor ~ Gender + 
+                   Other_Objectification_Actor:Gender + 
+                   Other_Objectification_Partner:Gender - 1,
+                 data = pairwise_Nice,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+apim_stp3 <- gls(Relationship_Satisfaction_Actor ~ Gender +
+                   Other_Objectification_Actor:Gender + 
+                   Other_Objectification_Partner:Gender + 
+                   Self_Objectification_Actor:Gender + 
+                   Self_Objectification_Partner:Gender - 1,
+                 data = pairwise_Nice,
+                 correlation = corCompSymm(form=~1|Dyad_ID), 
+                 weights = varIdent(form=~1|gender_A), 
+                 na.action = na.omit)
+
+```
+
+```{r}
+tab_model(apim_stp1)
+```
+
+```{r}
+tab_model(apim_stp2)
+```
+
+```{r}
+tab_model(apim_stp3)
 ```
 
