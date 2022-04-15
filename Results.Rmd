@@ -56,5 +56,3 @@ Model 2 shows that there is no significant association between a woman’s objec
 ![The Moderated Mediation Model: This figure shows the associations between predictors, mediators, and response variables as the moderated mediation model. Model 1 is represented by green arrows, and model 2 is represented by blue arrows.  Dashed arrows are statistically insignificant coefficients (B) demonstrating p values > 0.05. Bold arrows and asterix are statistically significant coefficients (B) with p values < 0.05.](Images/hypothesis_model_results.png)
 
 
-<div id="refs" custom-style="Bibliography"></div>
-\endgroup
