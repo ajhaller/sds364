@@ -95,12 +95,15 @@ apim_stp2 <- gls(Self_Objectification_Actor ~ Gender +
                  weights = varIdent(form=~1|gender_A), 
                  na.action = na.omit)
 
-apim_stp3 <- gls(Relationship_Satisfaction_Actor ~ Gender +
+pairwise_Nicer <- pairwise_Nice %>%
+  rename(Relationship_Satisfaction_Actor_with_Mediation_of_Self_Objectification = Relationship_Satisfaction_Actor)
+
+apim_stp3 <- gls(Relationship_Satisfaction_Actor_with_Mediation_of_Self_Objectification ~ Gender +
                    Other_Objectification_Actor:Gender + 
                    Other_Objectification_Partner:Gender + 
                    Self_Objectification_Actor:Gender + 
                    Self_Objectification_Partner:Gender - 1,
-                 data = pairwise_Nice,
+                 data = pairwise_Nicer,
                  correlation = corCompSymm(form=~1|Dyad_ID), 
                  weights = varIdent(form=~1|gender_A), 
                  na.action = na.omit)
@@ -108,7 +111,7 @@ apim_stp3 <- gls(Relationship_Satisfaction_Actor ~ Gender +
 ```
 
 ```{r}
-tab_model(apim_stp1)
+tab_model(apim_stp1, title = "Other Objectification vs. Relationship Satisfaction (Actor)")
 ```
 
 ```{r}
@@ -117,5 +120,11 @@ tab_model(apim_stp2)
 
 ```{r}
 tab_model(apim_stp3)
+```
+
+```{r}
+#all models together
+
+tab_model(apim_stp1, apim_stp2, apim_stp3, title = "Other Objectification vs. Relationship Satisfaction Mediated by Self Objectification ")
 ```
 
