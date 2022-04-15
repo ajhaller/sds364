@@ -41,15 +41,20 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Results
 
+# Relationship Satisfaction and Partner Objectifcation
+
+Model 1 and 2  represented the direct association between predictors other objectification of a man and the woman's other objectification, and  relationship satisfaction of the woman and the relationship satisfaction of the man as the response variable. There were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction in romantic relationships (b = 0.011, p = 0.846), and between the woman's objectification of her partner with the man’s relationship satisfaction in romantic relationship (b = 0.002, p = 0.967) (see Figure 1.). Hypothesis 1 is not supported as the results show there is not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 is not supported as the results show there are not statistically significant differences in other objectification and relationship satisfaction between gender. Please refer to table 1 for supplemental information.
+
+# Relationship Satisfaction with Mediation
+
+Models 3 and 4 includes the variable self objectification for both the man and the woman as a mediator between the other objectification of a man with the woman’s relationship satisfaction (model 3), and the associations between other objectification of a woman with the man’s relationship satisfaction (model 4).
+
+In Model 3, there is not a significant association between the man’s partner objectification towards the woman with the woman’s relationship satisfaction while mediating for the woman’s objectification of herself (<em>b</em> = 0.039, <em>p</em> = 0.519)(see Figure 1.).  This does not support our third hypothesis which suggested that the association between man’s objectification of his partner and the partner’s relationship satisfaction is dependent on a woman’s objectification of herself.  However, model 3 did result in a statistically significant association between the man’s partner objectification and the woman’s self objectification (<em>b</em> = 0.279, <em>p</em> = 0.0002)(see Figure 1.). This suggests that a man who objectifies the woman in a heterosexual relationship is associated with the woman objectifying herself more. 
+
+Model 4 shows that there is no significant association between a woman’s objectification of her partner and the partner’s relationship satisfaction with the man’s self objectification as a mediating variable (<em>b</em> = 0.026, <em>p</em> = 0.687)( see Figure 1.).  This does not support our fourth hypothesis that the association between a woman's objectification of her partner and the partner’s relationship satisfaction is dependent on a man’s objectification of himself. However, Model 4 also shows that there is a statistically significant indirect relationship between the woman’s partner objectification and the man’s self objectification (<em>b</em> = 0.209, <em>p</em> = 0.011). This suggests that a woman’s partner objectification towards the man makes men in heterosexual relationships objectify themselves more. Results in model 4 also show that a man’s objectification of himself is associated with a decrease in his relationship satisfaction (<em>b</em> = -0.150, <em>p</em> = 0.015)(see Figure 1.). 
+
 ![The Moderated Mediation Model](Images/hypothesis_model_results.png)
 
-\newpage
-
-# References
-
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
 
 <div id="refs" custom-style="Bibliography"></div>
 \endgroup
