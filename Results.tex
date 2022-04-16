@@ -4,9 +4,9 @@
 %
 \documentclass[
   english,
-  man]{apa6}
+  man,floatsintext]{apa6}
 \title{Results}
-\author{Vivian Almaraz\textsuperscript{1}, AJ Haller\textsuperscript{1}, \& Alejandra Munoz\textsuperscript{1}}
+\author{Vivian Almaraz\textsuperscript{}, AJ Haller\textsuperscript{}, \& Alejandra Munoz\textsuperscript{}}
 \date{}
 
 \usepackage{amsmath,amssymb}
@@ -42,7 +42,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Results},
-  pdfauthor={Vivian Almaraz1, AJ Haller1, \& Alejandra Munoz1},
+  pdfauthor={Vivian Almaraz, AJ Haller, \& Alejandra Munoz},
   pdflang={en-EN},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -115,12 +115,6 @@
   {}{\typeout{Failed to patch title.}}
 \makeatother
 \shorttitle{Results}
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{csquotes}
 \ifXeTeX
   % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
@@ -137,7 +131,7 @@
 \fi
 
 
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Smith College}
+\affiliation{\phantom{0}}
 
 \begin{document}
 \maketitle
@@ -148,7 +142,7 @@
 \hypertarget{relationship-satisfaction-and-partner-objectifcation}{%
 \subsection{Relationship Satisfaction and Partner Objectifcation}\label{relationship-satisfaction-and-partner-objectifcation}}
 
-Figure 1 shows the direct association between predictors other objectification of a man and the woman's other objectification, and woman's relationship satisfaction and the relationship satisfaction of the man as the response variable. Figure 1 shows there were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction in romantic relationships (b = 0.011, p = 0.846), and between the woman's objectification of her partner with the man's relationship satisfaction in romantic relationship (b = 0.002, p = 0.967) (see Figure 1.). Hypothesis 1 is not supported as the results show there is not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 is not supported as the results show there are not statistically significant differences in other objectification and relationship satisfaction between gender. Please refer to table 1 for supplemental information.
+Figure 1 shows the direct association between predictors other objectification of a man and the woman's other objectification, and woman's relationship satisfaction and the relationship satisfaction of the man as the response variable. Figure 1 shows there were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction in romantic relationships (b = 0.011, p = 0.846), and between the woman's objectification of her partner with the man's relationship satisfaction in romantic relationship (b = 0.002, p = 0.967) (see Figure 1.). Hypothesis 1 is not supported as the results show there is not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 is not supported as the results show there are not statistically significant differences in other objectification and relationship satisfaction between gender. Please refer to Figure 2 for supplemental information.
 
 \hypertarget{relationship-satisfaction-with-mediation}{%
 \subsection{Relationship Satisfaction with Mediation}\label{relationship-satisfaction-with-mediation}}
@@ -167,8 +161,23 @@ Model 2 shows that there is no significant association between a woman's objecti
 
 \begin{figure}
 \centering
+\includegraphics{Images/ResultsTable.png}
+\caption{Other Objectification vs.~Relationship Satisfaction Mediated by Self Objectification}
+\end{figure}
+
+\begin{figure}
+\centering
 \includegraphics{Images/SO_vs_RSA.png}
-\caption{Self Objectification Vs. Relationship Satisfaction}
+\caption{Self Objectification vs.~Relationship Satisfaction: Only the relationship between Self Objectification and Relationship Satisfaction was significant for males, that is, the more males in heterosexual relationships self objectify, the less satisfied they are with their relationships on average}
+\end{figure}
+
+\hypertarget{exploratory-analysis}{%
+\subsection{Exploratory Analysis}\label{exploratory-analysis}}
+
+\begin{figure}
+\centering
+\includegraphics{Images/OO_vs_RSA.png}
+\caption{Other Objectification vs.~Relationship Satisfaction: During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying theirself and their partner self objectifying, regardless of gender}
 \end{figure}
 
 
