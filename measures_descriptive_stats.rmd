@@ -58,8 +58,9 @@ library(arsenal)
 library(Hmisc)
 library(data.table)
 library(readr)
-TeleCom_Dyad_premeasures <- read_csv("TeleCom_Dyad_premeasures.csv")
-pairwise_df <- read_csv("pairwise_df.csv")
+TeleCom_Dyad_premeasures <- read_csv("C:/Program Files/Git/bin/sds364/TeleCom_Dyad_premeasures.csv")
+pairwise2 <- read_csv("C:/Program Files/Git/bin/sds364/pairwise2.csv")
+
 
 ```
 
@@ -114,7 +115,7 @@ apa_table(demo, escape = TRUE, font_size = "scriptsize", note = "We couldn't fig
 ```{r, warning = FALSE}
 # Correlations between Study Variables
 
-vars <- pairwise_df %>% 
+vars <- pairwise2 %>% 
   select(relation_qual.avg_A, self_object.tavg_A, other_object.tavg_A) %>% 
   rename("Relationship Quality" = relation_qual.avg_A,
          "Self Objectification" = self_object.tavg_A,
