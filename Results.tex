@@ -3,7 +3,12 @@
 \PassOptionsToPackage{hyphens}{url}
 %
 \documentclass[
-  man]{apa6}
+  english,
+  man,floatsintext]{apa6}
+\title{Results}
+\author{Vivian Almaraz\textsuperscript{}, AJ Haller\textsuperscript{}, \& Alejandra Munoz\textsuperscript{}}
+\date{}
+
 \usepackage{amsmath,amssymb}
 \usepackage{lmodern}
 \usepackage{iftex}
@@ -37,7 +42,7 @@
 \IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
 \hypersetup{
   pdftitle={Results},
-  pdfauthor={Vivian Almaraz1, AJ Haller1, \& Alejandra Munoz1},
+  pdfauthor={Vivian Almaraz, AJ Haller, \& Alejandra Munoz},
   pdflang={en-EN},
   hidelinks,
   pdfcreator={LaTeX via pandoc}}
@@ -68,38 +73,6 @@
   \let\oldsubparagraph\subparagraph
   \renewcommand{\subparagraph}[1]{\oldsubparagraph{#1}\mbox{}}
 \fi
-\newlength{\cslhangindent}
-\setlength{\cslhangindent}{1.5em}
-\newlength{\csllabelwidth}
-\setlength{\csllabelwidth}{3em}
-\newlength{\cslentryspacingunit} % times entry-spacing
-\setlength{\cslentryspacingunit}{\parskip}
-\newenvironment{CSLReferences}[2] % #1 hanging-ident, #2 entry spacing
- {% don't indent paragraphs
-  \setlength{\parindent}{0pt}
-  % turn on hanging indent if param 1 is 1
-  \ifodd #1
-  \let\oldpar\par
-  \def\par{\hangindent=\cslhangindent\oldpar}
-  \fi
-  % set entry spacing
-  \setlength{\parskip}{#2\cslentryspacingunit}
- }%
- {}
-\usepackage{calc}
-\newcommand{\CSLBlock}[1]{#1\hfill\break}
-\newcommand{\CSLLeftMargin}[1]{\parbox[t]{\csllabelwidth}{#1}}
-\newcommand{\CSLRightInline}[1]{\parbox[t]{\linewidth - \csllabelwidth}{#1}\break}
-\newcommand{\CSLIndent}[1]{\hspace{\cslhangindent}#1}
-\ifLuaTeX
-\usepackage[bidi=basic]{babel}
-\else
-\usepackage[bidi=default]{babel}
-\fi
-\babelprovide[main,import]{english}
-% get rid of language-specific shorthands (see #6817):
-\let\LanguageShortHands\languageshorthands
-\def\languageshorthands#1{}
 % Manuscript styling
 \usepackage{upgreek}
 \captionsetup{font=singlespacing,justification=justified}
@@ -142,23 +115,23 @@
   {}{\typeout{Failed to patch title.}}
 \makeatother
 \shorttitle{Results}
-\DeclareDelayedFloatFlavor{ThreePartTable}{table}
-\DeclareDelayedFloatFlavor{lltable}{table}
-\DeclareDelayedFloatFlavor*{longtable}{table}
-\makeatletter
-\renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
-\makeatother
 \usepackage{csquotes}
+\ifXeTeX
+  % Load polyglossia as late as possible: uses bidi with RTL langages (e.g. Hebrew, Arabic)
+  \usepackage{polyglossia}
+  \setmainlanguage[]{english}
+\else
+  \usepackage[main=english]{babel}
+% get rid of language-specific shorthands (see #6817):
+\let\LanguageShortHands\languageshorthands
+\def\languageshorthands#1{}
+\fi
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
 \fi
 
-\title{Results}
-\author{Vivian Almaraz\textsuperscript{1}, AJ Haller\textsuperscript{1}, \& Alejandra Munoz\textsuperscript{1}}
-\date{}
 
-
-\affiliation{\vspace{0.5cm}\textsuperscript{1} Smith College}
+\affiliation{\phantom{0}}
 
 \begin{document}
 \maketitle
@@ -166,26 +139,49 @@
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
+\hypertarget{analysis-strategy}{%
+\subsection{Analysis Strategy}\label{analysis-strategy}}
+
+Our study aims to provide insight as to how men and women objectify themselves and their partner differently, and how this explains their own and their partner's satisfaction in their relationship. We hypothesis that high levels of partner objectification are associated with lower levels of relationship satisfaction for both men and women; there is a stronger association between partner objectification and relationship satisfaction for women than for men in heterosexual relationships; the association between man's objectification of his partner and the partner's relationship satisfaction is dependent on a woman's objectification of herself; the association between a woman's objectification of her partner and the partner's relationship satisfaction is dependent on a man's objectification of himself.
+
+\hypertarget{main-results}{%
+\subsection{Main Results}\label{main-results}}
+
+\hypertarget{relationship-satisfaction-and-partner-objectifcation}{%
+\subsubsection{Relationship Satisfaction and Partner Objectifcation}\label{relationship-satisfaction-and-partner-objectifcation}}
+
+Figure 1 shows the direct association between predictors other objectification of a man and the woman's other objectification, and woman's relationship satisfaction and the relationship satisfaction of the man as the response variable. Figure 1 shows there were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction in romantic relationships (b = 0.011, p = 0.846), and between the woman's objectification of her partner with the man's relationship satisfaction in romantic relationship (b = 0.002, p = 0.967) (see Figure 1.). Hypothesis 1 is not supported as the results show there is not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 is not supported as the results show there are not statistically significant differences in other objectification and relationship satisfaction between gender. Please refer to Figure 2 for supplemental information.
+
 \begin{figure}
-\centering
-\includegraphics{Images/hypothesis_model_results.png}
-\caption{The Moderated Mediation Model}
+\includegraphics[width=1\linewidth]{Images/hypothesis_model_results} \caption{ }\label{fig:unnamed-chunk-3}
 \end{figure}
 
-\newpage
+\begin{figure}
+\includegraphics[width=1\linewidth]{Images/ResultsTable} \caption{ }\label{fig:unnamed-chunk-4}
+\end{figure}
 
-\hypertarget{references}{%
-\section{References}\label{references}}
+The Moderated Mediation Model: This figure shows the associations between predictors, mediators, and response variables as the moderated mediation model. Model 1 is represented by light grey arrows, and model 2 is represented by dark grey arrows. Dashed arrows are statistically insignificant coefficients (B) demonstrating p values \textgreater{} 0.05. Bold arrows and asterix are statistically significant coefficients (B) with p values \textless{} 0.05.
 
-\begingroup
-\setlength{\parindent}{-0.5in}
-\setlength{\leftskip}{0.5in}
+\hypertarget{relationship-satisfaction-with-mediation}{%
+\subsubsection{Relationship Satisfaction with Mediation}\label{relationship-satisfaction-with-mediation}}
 
-\hypertarget{refs}{}
-\begin{CSLReferences}{0}{0}
-\end{CSLReferences}
+Models 1 and 2 includes the variable self objectification for both the man and the woman as a mediator between the other objectification of a man with the woman's relationship satisfaction (model 1), and the associations between other objectification of a woman with the man's relationship satisfaction (model 2).
 
-\endgroup
+In Model 1, there is not a significant association between the man's partner objectification towards the woman with the woman's relationship satisfaction while mediating for the woman's objectification of herself (b = 0.039, p = 0.519)(see Figure 1.). This does not support our third hypothesis which suggested that the association between man's objectification of his partner and the partner's relationship satisfaction is dependent on a woman's objectification of herself. However, model 1 did result in a statistically significant association between the man's partner objectification and the woman's self objectification (b = 0.279, p = 0.0002)(see Figure 1.). This suggests that a man who objectifies the woman in a heterosexual relationship is associated with the woman objectifying herself more.
+
+Model 2 shows that there is no significant association between a woman's objectification of her partner and the partner's relationship satisfaction with the man's self objectification as a mediating variable (b = 0.026, p = 0.687)( see Figure 1.). This does not support our fourth hypothesis that the association between a woman's objectification of her partner and the partner's relationship satisfaction is dependent on a man's objectification of himself. However, Model 2 also shows that there is a statistically significant indirect relationship between the woman's partner objectification and the man's self objectification (b = 0.209, p = 0.011). This suggests that a woman's partner objectification towards the man makes men in heterosexual relationships objectify themselves more. Results in model 2 also show that a man's objectification of himself is associated with a decrease in his relationship satisfaction (b = -0.150, p = 0.015)(see Figure 1.).
+
+\begin{figure}
+\centering
+\includegraphics{Images/SO_vs_RSA.png}
+\caption{Self Objectification vs.~Relationship Satisfaction: Only the relationship between Self Objectification and Relationship Satisfaction was significant for males, that is, the more males in heterosexual relationships self objectify, the less satisfied they are with their relationships on average}
+\end{figure}
+
+\begin{figure}
+\centering
+\includegraphics{Images/OO_vs_RSA.png}
+\caption{\textbf{Exploratory Analysis:} (Other Objectification vs.~Relationship Satisfaction) During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying theirself and their partner self objectifying, regardless of gender}
+\end{figure}
 
 
 \end{document}
