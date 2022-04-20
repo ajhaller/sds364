@@ -1,21 +1,11 @@
 ---
 title             : "Measures and Descriptive Stats"
 shorttitle        : "Title"
-
 author: 
   - name          : "Vivian Almaraz"
-    affiliation   : "1"
   - name          : "AJ Haller"
-    affiliation   : "1"
   - name          : "Alejandra Munoz"
-    affiliation   : "1"
-
-affiliation:
-  - id            : "1"
-    institution   : "Smith College"
-
 bibliography      : ["r-references.bib", "dsc_references.bib"]
-
 floatsintext      : no
 figurelist        : no
 tablelist         : no
@@ -23,10 +13,11 @@ footnotelist      : no
 linenumbers       : no
 mask              : no
 draft             : no
-
 documentclass     : "apa6"
 classoption       : "man"
 output            : papaja::apa6_pdf
+editor_options: 
+  chunk_output_type: inline
 ---
 
 ```{r setup, include = FALSE}
@@ -44,13 +35,13 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Measures
 
-**Relationship satisfaction.** Relationship satisfaction is measured with the Relationship Questionnaire [@braiker1979conflict].  Ten out of the 30 items in the relationship questionnaire were used to measure feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Example items of this scale include “To what extent did you love your partner at this stage?” and “How committed do you feel towards your partner?” “How much do you feel you gave to the relationship?.” Items were measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
+**Relationship satisfaction.** The relationship satisfaction variable is measured with the Relationship Questionnaire (@braiker1979conflict). 10 out of the 30 items in the relationship questionnaire were used to describe aspects of feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Some items of this scale include "To what extent did you love your partner at this stage?" "How committed do you feel towards your partner?" "How much do you feel you gave to the relationship?." This was measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
 
-**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their  partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated.
+**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire (@noll1998mediational). Each participant completed the questionnaire two times, first based on how they would objectify themselves, and then how they objectify their partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification is low, ICC = 0.241, and the intraclass correlation coefficient for other objectification is also low, ICC = 0.181. The self and other objectification scales are ranked, and vary for every participant, so we do not expect the intraclass coefficients to be highly correlated.
 
 # Participants
 
-**Demographics.** Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The participants were asked to complete questionnaires and a daily measure for 14 days. Participants were not compensated for completing the questionnaires but received $2 for every day they completed the daily measures. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%.  The participants’ ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years).
+**Demographics.** Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The participants were asked to complete questionnaires and a daily measure for 14 days. Participants were not compensated for completing the questionnaires but received \$2 for every day they completed the daily measures. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%. The participants' ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years).
 
 ```{r, include=FALSE}
 library(tidyverse)
@@ -86,31 +77,41 @@ demographics_df <- TeleCom_Dyad_premeasures %>%
 
 ```
 
++------------------------------------------------+-----------------+-----------------+-----------------+
+|                                                | Man (N=173)     | Woman (N=173)   | Total (N=346)   |
++:===============================================+:===============:+:===============:+:===============:+
+| **Race**                                       |                 |                 |                 |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Asian or Asian American                        | 15 (8.7%)       | 20 (11.6%)      | 35 (10.1%)      |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Black or African American                      | 11 (6.4%)       | 11 (6.4%)       | 22 (6.4%)       |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Latinx or Hispanic                             | 10 (5.8%)       | 9 (5.2%)        | 19 (5.5%)       |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Middle Eastern                                 | 0 (0.0%)        | 2 (1.2%)        | 2 (0.6%)        |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Other                                          | 0 (0.0%)        | 1 (0.6%)        | 1 (0.3%)        |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Prefer not to answer                           | 3 (1.7%)        | 1 (0.6%)        | 4 (1.2%)        |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| White or European American                     | 132 (76.3%)     | 127 (73.4%)     | 259 (74.9%)     |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| White or European American, Latinx or Hispanic | 2 (1.2%)        | 2 (1.2%)        | 4 (1.2%)        |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| **Age**                                        |                 |                 |                 |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Mean (SD)                                      | 46.890 (8.790)  | 44.803 (7.743)  | 45.847 (8.337)  |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Range                                          | 26.000 - 74.000 | 30.000 - 65.000 | 26.000 - 74.000 |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| **Sexual Orientation**                         |                 |                 |                 |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Bisexual                                       | 2 (1.2%)        | 6 (3.5%)        | 8 (2.3%)        |
++------------------------------------------------+-----------------+-----------------+-----------------+
+| Heterosexual                                   | 171 (98.8%)     | 167 (96.5%)     | 338 (97.7%)     |
++------------------------------------------------+-----------------+-----------------+-----------------+
 
-```{r, warning = FALSE}
-# Demographics Table
-
-demographics <- demographics_df %>%
-  select(-dyadID) %>% 
-  mutate(gender =
-           case_when(gender == "Man" | gender == "Man,Cis gendered" ~ "Man",
-                     gender == "Woman" | gender == "Woman,Cis gendered" ~ "Woman")
-  )
-
-my_labels <- list(
-  race = 'Race',
-  birthday = 'Age',
-  sexualor = 'Seuxal Orientation'
-)
-
-table_one <- tableby(gender ~ ., data = demographics, test = FALSE) 
-demo <- as.data.frame(summary(table_one, labelTranslations = my_labels, title = "Demographic Data"))
-```
-
-```{r}
-apa_table(demo, escape = TRUE, font_size = "scriptsize", note = "We couldn't figure out how to format it correctly in papaja, but in the rmd it's fine. We will figure this out.")
-```
-
+: Demographic Data
 
 ```{r, warning = FALSE}
 # Correlations between Study Variables
@@ -146,9 +147,14 @@ apa_table(correlation, escape = TRUE, font_size = "footnotesize")
 
 # References
 
+```{=tex}
 \begingroup
 \setlength{\parindent}{-0.5in}
 \setlength{\leftskip}{0.5in}
+```
+::: {#refs custom-style="Bibliography"}
+:::
 
-<div id="refs" custom-style="Bibliography"></div>
+```{=tex}
 \endgroup
+```

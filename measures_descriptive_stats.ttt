@@ -1,3 +1,48 @@
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.48}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.17}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.17}}@{}}
+\caption{Demographic Data}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Man (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Woman (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Total (N=346)
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Man (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Woman (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Total (N=346)
+\end{minipage} \\
+\midrule
+\endhead
+\textbf{Race} & & & \\
+Asian or Asian American & 15 (8.7\%) & 20 (11.6\%) & 35 (10.1\%) \\
+Black or African American & 11 (6.4\%) & 11 (6.4\%) & 22 (6.4\%) \\
+Latinx or Hispanic & 10 (5.8\%) & 9 (5.2\%) & 19 (5.5\%) \\
+Middle Eastern & 0 (0.0\%) & 2 (1.2\%) & 2 (0.6\%) \\
+Other & 0 (0.0\%) & 1 (0.6\%) & 1 (0.3\%) \\
+Prefer not to answer & 3 (1.7\%) & 1 (0.6\%) & 4 (1.2\%) \\
+White or European American & 132 (76.3\%) & 127 (73.4\%) & 259 (74.9\%) \\
+White or European American, Latinx or Hispanic & 2 (1.2\%) & 2 (1.2\%) & 4 (1.2\%) \\
+\textbf{Age} & & & \\
+Mean (SD) & 46.890 (8.790) & 44.803 (7.743) & 45.847 (8.337) \\
+Range & 26.000 - 74.000 & 30.000 - 65.000 & 26.000 - 74.000 \\
+\textbf{Sexual Orientation} & & & \\
+Bisexual & 2 (1.2\%) & 6 (3.5\%) & 8 (2.3\%) \\
+Heterosexual & 171 (98.8\%) & 167 (96.5\%) & 338 (97.7\%) \\
+\bottomrule
+\end{longtable}
 \begin{table*}[hbt]
 \ifnextchar[{\eatarg}{}
 [tbp]
@@ -6,50 +51,6 @@
 \begin{threeparttable}
 
 \caption{\label{tab:unnamed-chunk-4}}
-
-\scriptsize{
-
-\begin{tabular}{llll}
-\toprule
- & \multicolumn{1}{c}{Man (N=173)} & \multicolumn{1}{c}{Woman (N=173)} & \multicolumn{1}{c}{Total (N=346)}\\
-\midrule
-**Race** &  &  & \\
-\&nbsp;\&nbsp;\&nbsp;Asian or Asian American & 15 (8.7\%) & 20 (11.6\%) & 35 (10.1\%)\\
-\&nbsp;\&nbsp;\&nbsp;Black or African American & 11 (6.4\%) & 11 (6.4\%) & 22 (6.4\%)\\
-\&nbsp;\&nbsp;\&nbsp;Latinx or Hispanic & 10 (5.8\%) & 9 (5.2\%) & 19 (5.5\%)\\
-\&nbsp;\&nbsp;\&nbsp;Middle Eastern & 0 (0.0\%) & 2 (1.2\%) & 2 (0.6\%)\\
-\&nbsp;\&nbsp;\&nbsp;Other & 0 (0.0\%) & 1 (0.6\%) & 1 (0.3\%)\\
-\&nbsp;\&nbsp;\&nbsp;Prefer not to answer & 3 (1.7\%) & 1 (0.6\%) & 4 (1.2\%)\\
-\&nbsp;\&nbsp;\&nbsp;White or European American & 132 (76.3\%) & 127 (73.4\%) & 259 (74.9\%)\\
-\&nbsp;\&nbsp;\&nbsp;White or European American,Latinx or Hispanic & 2 (1.2\%) & 2 (1.2\%) & 4 (1.2\%)\\
-**Age** &  &  & \\
-\&nbsp;\&nbsp;\&nbsp;Mean (SD) & 46.890 (8.790) & 44.803 (7.743) & 45.847 (8.337)\\
-\&nbsp;\&nbsp;\&nbsp;Range & 26.000 - 74.000 & 30.000 - 65.000 & 26.000 - 74.000\\
-**Seuxal Orientation** &  &  & \\
-\&nbsp;\&nbsp;\&nbsp;Bisexual & 2 (1.2\%) & 6 (3.5\%) & 8 (2.3\%)\\
-\&nbsp;\&nbsp;\&nbsp;Heterosexual & 171 (98.8\%) & 167 (96.5\%) & 338 (97.7\%)\\
-\bottomrule
-\addlinespace
-\end{tabular}
-
-}
-
-\begin{tablenotes}[para]
-\normalsize{\textit{Note.} We couldn't figure out how to format it correctly in papaja, but in the rmd it's fine. We will figure this out.}
-\end{tablenotes}
-
-\end{threeparttable}
-\end{center}
-
-\end{table*}
-\begin{table*}[hbt]
-\ifnextchar[{\eatarg}{}
-[tbp]
-
-\begin{center}
-\begin{threeparttable}
-
-\caption{\label{tab:unnamed-chunk-6}}
 
 \footnotesize{
 
