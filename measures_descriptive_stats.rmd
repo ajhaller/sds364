@@ -44,9 +44,9 @@ knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
 
 # Measures
 
-**Relationship satisfaction.** The relationship satisfaction variable is measured with the Relationship Questionnaire (@braiker1979conflict).  10 out of the 30 items in the relationship questionnaire were used to describe aspects of feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Some items of this scale include “To what extent did you love your partner at this stage?” “How committed do you feel towards your partner?” “How much do you feel you gave to the relationship?.” This was measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
+**Relationship satisfaction.** Relationship satisfaction is measured with the Relationship Questionnaire [@braiker1979conflict].  Ten out of the 30 items in the relationship questionnaire were used to measure feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Example items of this scale include “To what extent did you love your partner at this stage?” and “How committed do you feel towards your partner?” “How much do you feel you gave to the relationship?.” Items were measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
 
-**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire (@noll1998mediational). Each participant completed the questionnaire two times, first based on how they would objectify themselves, and then how they objectify their  partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification is low, ICC = 0.241, and the intraclass correlation coefficient for other objectification is also low, ICC = 0.181. The self and other objectification scales are ranked, and vary for every participant, so we do not expect the intraclass coefficients to be highly correlated.
+**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their  partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated.
 
 # Participants
 
@@ -98,9 +98,9 @@ demographics <- demographics_df %>%
   )
 
 my_labels <- list(
-  race = "Race",
-  birthday = "Age",
-  sexualor = "Seuxal Orientation"
+  race = 'Race',
+  birthday = 'Age',
+  sexualor = 'Seuxal Orientation'
 )
 
 table_one <- tableby(gender ~ ., data = demographics, test = FALSE) 
