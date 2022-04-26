@@ -1,0 +1,28 @@
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Images/hypothesis_model_results.png}
+\caption{Hypothesis}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Images/SO_RS_updated.png}
+\caption{Self Objectification vs.~Relationship Satisfaction: Only the relationship between Self Objectification and Relationship Satisfaction was significant for males, that is, the more males in heterosexual relationships self objectify, the less satisfied they are with their relationships on average}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Images/ResultsTableEdited.png}
+\caption{Other Objectification vs.~Relationship Satisfaction Mediated by Self Objectification}
+\end{figure*}
+\begin{figure*}[hbt]
+\ifnextchar[{\eatarg}{}
+
+\centering
+\includegraphics{Images/OO_vs_RSA.png}
+\caption{\textbf{Exploratory Analysis:} (Other Objectification vs.~Relationship Satisfaction) During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying theirself and their partner self objectifying, regardless of gender}
+\end{figure*}
