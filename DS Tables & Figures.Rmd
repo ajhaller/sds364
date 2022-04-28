@@ -96,9 +96,9 @@ apim_stp2 <- gls(Self_Objectification_Actor ~ Gender +
                  na.action = na.omit)
 
 pairwise_Nicer <- pairwise_Nice %>%
-  rename(Relationship_Satisfaction_Actor_with_Mediation_of_Self_Objectification = Relationship_Satisfaction_Actor)
+  rename(Relationship_Satisfaction_Actor_Controlling_for_Self_Objectification = Relationship_Satisfaction_Actor)
 
-apim_stp3 <- gls(Relationship_Satisfaction_Actor_with_Mediation_of_Self_Objectification ~ Gender +
+apim_stp3 <- gls(Relationship_Satisfaction_Actor_Controlling_for_Self_Objectification ~ Gender +
                    Other_Objectification_Actor:Gender + 
                    Other_Objectification_Partner:Gender + 
                    Self_Objectification_Actor:Gender + 
