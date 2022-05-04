@@ -148,9 +148,6 @@
 \makeatletter
 \renewcommand{\efloat@iwrite}[1]{\immediate\expandafter\protected@write\csname efloat@post#1\endcsname{}}
 \makeatother
-\usepackage{lineno}
-
-\linenumbers
 \usepackage{csquotes}
 \ifLuaTeX
   \usepackage{selnolig}  % disable illegal ligatures
@@ -233,8 +230,6 @@ We report how we determined our sample size, all data exclusions (if any), all m
 \hypertarget{data-analysis}{%
 \subsection{Data analysis}\label{data-analysis}}
 
-We used R {[}Version 4.0.2; R Core Team (2020){]} and the R-packages \emph{arsenal} {[}Version 3.6.3; Heinzen, Sinnwell, Atkinson, Gunderson, and Dougherty (2021){]}, \emph{data.table} {[}Version 1.14.2; Dowle and Srinivasan (2021){]}, \emph{dplyr} {[}Version 1.0.7; Wickham, François, Henry, and Müller (2021){]}, \emph{forcats} {[}Version 0.5.1; Wickham (2021a){]}, \emph{Formula} {[}Version 1.2.4; Zeileis and Croissant (2010){]}, \emph{ggplot2} {[}Version 3.3.5; Wickham (2016){]}, \emph{Hmisc} {[}Version 4.6.0; Harrell Jr (2021){]}, \emph{lattice} {[}Version 0.20.45; Sarkar (2008){]}, \emph{papaja} {[}Version 0.1.0.9997; Aust and Barth (2020){]}, \emph{purrr} {[}Version 0.3.4; Henry and Wickham (2020){]}, \emph{readr} {[}Version 2.1.1; Wickham, Hester, and Bryan (2021){]}, \emph{sjPlot} {[}Version 2.8.10; Lüdecke (2021){]}, \emph{stringr} {[}Version 1.4.0; Wickham (2019){]}, \emph{survival} {[}Version 3.2.13; Terry M. Therneau and Patricia M. Grambsch (2000){]}, \emph{tibble} {[}Version 3.1.6; Müller and Wickham (2021){]}, \emph{tidyr} {[}Version 1.1.4; Wickham (2021b){]}, and \emph{tidyverse} {[}Version 1.3.1; Wickham et al. (2019){]} for all our analyses.
-
 \hypertarget{results}{%
 \section{Results}\label{results}}
 
@@ -245,7 +240,8 @@ We used R {[}Version 4.0.2; R Core Team (2020){]} and the R-packages \emph{arsen
 
 There is no evidence that supports self objectification meditates the association between partner objectification and relationship satisfaction in this study. Our results did find that an individual objectified by their partner is likely to objectify themselves, and an individual that objectifies their partner is likely to objectify themselves, both of which are consistent with previous literature (Strelan \& Hargreaves, 2005; Zurbriggen et al., 2011). Research shows there are associations between self objectification, partner objectification, and relationship satisfaction, so it was surprising that our findings suggest that self objectification does not mediate partner objectification and relationship satisfaction. It is possible that these hypotheses were not supported due to possible confounding variables, such as psychological intimacy as mentioned by Lameiras-Fernández et al. (2018).
 
-\#\#Conclusions
+\hypertarget{conclusions}{%
+\subsection{Conclusions}\label{conclusions}}
 
 Overall, there were no differences between the association between partner objectification and relationship satisfaction between men and women. This is surprising, as it is not consistent with previous literature. In addition, there was no evidence that suggests that self objectification meditates the association between partner objectification and relationship satisfaction. An objectified partner's relationship satisfaction is not dependent on their relationship satisfaction. We hope for future studies to consider other variables that could mediate partner objectification and relationship satisfaction such as psychological intimacy, particularly in women due to insignificant findings in women's relationship satisfaction in this study. We did however find that a man's objectification of himself negatively impacts his own relationship satisfaction, and this was not found in women. Our study highlights men's perspectives of their own perceptions of themselves, while previous studies have highlighted women's self objectification in relation to their relationship satisfaction. We hope that in an effort to promote quality relationships, our research inspires greater consideration of self objectification in men, and in women.
 
@@ -260,17 +256,11 @@ Overall, there were no differences between the association between partner objec
 
 \hypertarget{refs}{}
 \begin{CSLReferences}{1}{0}
-\leavevmode\vadjust pre{\hypertarget{ref-R-papaja}{}}%
-Aust, F., \& Barth, M. (2020). \emph{{papaja}: {Create} {APA} manuscripts with {R Markdown}}. Retrieved from \url{https://github.com/crsh/papaja}
-
 \leavevmode\vadjust pre{\hypertarget{ref-choma2010self}{}}%
 Choma, B. L., Visser, B. A., Pozzebon, J. A., Bogaert, A. F., Busseri, M. A., \& Sadava, S. W. (2010). Self-objectification, self-esteem, and gender: Testing a moderated mediation model. \emph{Sex Roles}, \emph{63}(9), 645--656.
 
 \leavevmode\vadjust pre{\hypertarget{ref-cole2013body}{}}%
 Cole, B. P., Davidson, M. M., \& Gervais, S. J. (2013). Body surveillance and body shame in college men: Are men who self-objectify less hopeful? \emph{Sex Roles}, \emph{69}(1), 29--41.
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-data.table}{}}%
-Dowle, M., \& Srinivasan, A. (2021). \emph{Data.table: Extension of `data.frame`}. Retrieved from \url{https://CRAN.R-project.org/package=data.table}
 
 \leavevmode\vadjust pre{\hypertarget{ref-fredrickson1997objectification}{}}%
 Fredrickson, B. L., \& Roberts, T.-A. (1997). Objectification theory: Toward understanding women's lived experiences and mental health risks. \emph{Psychology of Women Quarterly}, \emph{21}(2), 173--206.
@@ -278,20 +268,8 @@ Fredrickson, B. L., \& Roberts, T.-A. (1997). Objectification theory: Toward und
 \leavevmode\vadjust pre{\hypertarget{ref-gervais2011you}{}}%
 Gervais, S. J., Vescio, T. K., \& Allen, J. (2011). When what you see is what you get: The consequences of the objectifying gaze for women and men. \emph{Psychology of Women Quarterly}, \emph{35}(1), 5--17.
 
-\leavevmode\vadjust pre{\hypertarget{ref-R-Hmisc}{}}%
-Harrell Jr, F. E. (2021). \emph{Hmisc: Harrell miscellaneous}. Retrieved from \url{https://CRAN.R-project.org/package=Hmisc}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-arsenal}{}}%
-Heinzen, E., Sinnwell, J., Atkinson, E., Gunderson, T., \& Dougherty, G. (2021). \emph{Arsenal: An arsenal of 'r' functions for large-scale statistical summaries}. Retrieved from \url{https://CRAN.R-project.org/package=arsenal}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-purrr}{}}%
-Henry, L., \& Wickham, H. (2020). \emph{Purrr: Functional programming tools}. Retrieved from \url{https://CRAN.R-project.org/package=purrr}
-
 \leavevmode\vadjust pre{\hypertarget{ref-lameiras2018objectifying}{}}%
 Lameiras-Fernández, M., Fiske, S. T., Fernández, A. G., \& Lopez, J. F. (2018). Objectifying women's bodies is acceptable from an intimate perpetrator, at least for female sexists. \emph{Sex Roles}, \emph{79}(3), 190--205.
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-sjPlot}{}}%
-Lüdecke, D. (2021). \emph{sjPlot: Data visualization for statistics in social science}. Retrieved from \url{https://CRAN.R-project.org/package=sjPlot}
 
 \leavevmode\vadjust pre{\hypertarget{ref-mahar2020partner}{}}%
 Mahar, E. A., Webster, G. D., \& Markey, P. M. (2020). Partner--objectification in romantic relationships: A dyadic approach. \emph{Personal Relationships}, \emph{27}(1), 4--26.
@@ -302,14 +280,8 @@ Meltzer, A. L., \& McNulty, J. K. (2014). {``Tell me i'm sexy... And otherwise v
 \leavevmode\vadjust pre{\hypertarget{ref-meltzer2017women}{}}%
 Meltzer, A. L., McNulty, J. K., \& Maner, J. K. (2017). Women like being valued for sex, as long as it is by a committed partner. \emph{Archives of Sexual Behavior}, \emph{46}(2), 475--488.
 
-\leavevmode\vadjust pre{\hypertarget{ref-R-tibble}{}}%
-Müller, K., \& Wickham, H. (2021). \emph{Tibble: Simple data frames}. Retrieved from \url{https://CRAN.R-project.org/package=tibble}
-
 \leavevmode\vadjust pre{\hypertarget{ref-newheiser2010others}{}}%
 Newheiser, A.-K., LaFrance, M., \& Dovidio, J. F. (2010). Others as objects: How women and men perceive the consequences of self-objectification. \emph{Sex Roles}, \emph{63}(9), 657--671.
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-base}{}}%
-R Core Team. (2020). \emph{R: A language and environment for statistical computing}. Vienna, Austria: R Foundation for Statistical Computing. Retrieved from \url{https://www.R-project.org/}
 
 \leavevmode\vadjust pre{\hypertarget{ref-ramsey2015object}{}}%
 Ramsey, L. R., \& Hoyt, T. (2015). The object of desire: How being objectified creates sexual pressure for women in heterosexual relationships. \emph{Psychology of Women Quarterly}, \emph{39}(2), 151--170.
@@ -319,9 +291,6 @@ Ramsey, L. R., Marotta, J. A., \& Hoyt, T. (2017). Sexualized, objectified, but 
 
 \leavevmode\vadjust pre{\hypertarget{ref-saez2019objectification}{}}%
 Sáez, G., Riemer, A. R., Brock, R. L., \& Gervais, S. J. (2019). Objectification in heterosexual romantic relationships: Examining relationship satisfaction of female objectification recipients and male objectifying perpetrators. \emph{Sex Roles}, \emph{81}(5), 370--384.
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-lattice}{}}%
-Sarkar, D. (2008). \emph{Lattice: Multivariate data visualization with r}. New York: Springer. Retrieved from \url{http://lmdvr.r-forge.r-project.org}
 
 \leavevmode\vadjust pre{\hypertarget{ref-sciangula2009self}{}}%
 Sciangula, A., \& Morry, M. M. (2009). Self-esteem and perceived regard: How i see myself affects my relationship satisfaction. \emph{The Journal of Social Psychology}, \emph{149}(2), 143--158.
@@ -338,35 +307,8 @@ Teng, F., Chen, Z., Poon, K.-T., \& Zhang, D. (2015). Sexual objectification pus
 \leavevmode\vadjust pre{\hypertarget{ref-teran2021relational}{}}%
 Terán, L., Jiao, J., \& Aubrey, J. S. (2021). The relational burden of objectification: Exploring how past experiences of interpersonal sexual objectification are related to relationship competencies. \emph{Sex Roles}, \emph{84}(9), 610--625.
 
-\leavevmode\vadjust pre{\hypertarget{ref-R-survival-book}{}}%
-Terry M. Therneau, \& Patricia M. Grambsch. (2000). \emph{Modeling survival data: Extending the {C}ox model}. New York: Springer.
-
 \leavevmode\vadjust pre{\hypertarget{ref-visser2014enjoyment}{}}%
 Visser, B. A., Sultani, F., Choma, B. L., \& Pozzebon, J. A. (2014). Enjoyment of sexualization: Is it different for men? \emph{Journal of Applied Social Psychology}, \emph{44}(7), 495--504.
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-ggplot2}{}}%
-Wickham, H. (2016). \emph{ggplot2: Elegant graphics for data analysis}. Springer-Verlag New York. Retrieved from \url{https://ggplot2.tidyverse.org}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-stringr}{}}%
-Wickham, H. (2019). \emph{Stringr: Simple, consistent wrappers for common string operations}. Retrieved from \url{https://CRAN.R-project.org/package=stringr}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-forcats}{}}%
-Wickham, H. (2021a). \emph{Forcats: Tools for working with categorical variables (factors)}. Retrieved from \url{https://CRAN.R-project.org/package=forcats}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-tidyr}{}}%
-Wickham, H. (2021b). \emph{Tidyr: Tidy messy data}. Retrieved from \url{https://CRAN.R-project.org/package=tidyr}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-tidyverse}{}}%
-Wickham, H., Averick, M., Bryan, J., Chang, W., McGowan, L. D., François, R., \ldots{} Yutani, H. (2019). Welcome to the {tidyverse}. \emph{Journal of Open Source Software}, \emph{4}(43), 1686. \url{https://doi.org/10.21105/joss.01686}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-dplyr}{}}%
-Wickham, H., François, R., Henry, L., \& Müller, K. (2021). \emph{Dplyr: A grammar of data manipulation}. Retrieved from \url{https://CRAN.R-project.org/package=dplyr}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-readr}{}}%
-Wickham, H., Hester, J., \& Bryan, J. (2021). \emph{Readr: Read rectangular text data}. Retrieved from \url{https://CRAN.R-project.org/package=readr}
-
-\leavevmode\vadjust pre{\hypertarget{ref-R-Formula}{}}%
-Zeileis, A., \& Croissant, Y. (2010). Extended model formulas in {R}: Multiple parts and multiple responses. \emph{Journal of Statistical Software}, \emph{34}(1), 1--13. \url{https://doi.org/10.18637/jss.v034.i01}
 
 \leavevmode\vadjust pre{\hypertarget{ref-zurbriggen2011self}{}}%
 Zurbriggen, E. L., Ramsey, L. R., \& Jaworski, B. K. (2011). Self-and partner-objectification in romantic relationships: Associations with media consumption and relationship satisfaction. \emph{Sex Roles}, \emph{64}(7), 449--462.
