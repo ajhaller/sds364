@@ -85,15 +85,20 @@ Previous studies have not considered self objectification as a mediator between 
 
 
 # Methods
-We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
 
 ## Participants
 
-## Material
+Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%. The participants' ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years), and their income ranged from 0 dollars to 750,000 dollars.
+
+## Measures
+
+**Relationship satisfaction.** Relationship satisfaction is measured with the Relationship Questionnaire [@braiker1979conflict]. Ten out of the 30 items in the relationship questionnaire were used to measure feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Example items of this scale include "To what extent did you love your partner at this stage?", "How committed do you feel towards your partner?" and "How much do you feel you gave to the relationship?." Items were measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
+
+**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated.
 
 ## Procedure
 
-## Data analysis
+The participants were asked to complete questionnaires and a daily measure for 14 days. Participants were not compensated for completing the questionnaires but received \$2 for every day they completed the daily measures.
 
 # Results
 
@@ -103,7 +108,15 @@ We report how we determined our sample size, all data exclusions (if any), all m
 
 There is no evidence that supports self objectification meditates the association between partner objectification and relationship satisfaction in this study. Our results did find that an individual objectified by their partner is likely to objectify themselves, and an individual that objectifies their partner is likely to objectify themselves, both of which are consistent with previous literature [@zurbriggen2011self; @strelan2005women]. Research shows there are associations between self objectification, partner objectification, and relationship satisfaction, so it was surprising that our findings suggest that self objectification does not mediate partner objectification and relationship satisfaction. It is possible that these hypotheses were not supported due to possible confounding variables, such as psychological intimacy as mentioned by @lameiras2018objectifying.
 
-## Conclusions
+####Limitations of the study and alternative explanations####
+
+Limitations for our study arrived in the initial phases of devising the methodology. We intended to evaluate how the effects of objectification varied across sexuality, more specifically, the differences between heterosexual (male-female) couples and same sex couples. However, due to the lack of same sex couples in our sample, we limited the scope of our study to only heterosexual couples, and evaluated how the effects varied across gender. Limiting our study to male-female dyads leaves a couple questions left to be answered, for example, "Considering that Objectification Theory typically only discusses how women are affected by men's objectification of them, how do the effects of objectification change when no or only men are present in a relationship (same sex relationships)?" 
+
+The current research found that a man’s objectification of himself hurts his own relationship satisfaction, and this was not found in women (contrary to objectification theory). Alternative explanations for this finding may be because men are often the perpetrators of objectification. Therefore, objectification may have a different influence on relationship satisfaction for men than for women. Due to the prioritization of women in Objectification Theory, we were limited in previous research regarding how a women's objectification of a man effects him. Additionally, women often prioritize other emotional support factors when determining their satisfaction with their relationship, alongside objectification. Our model did not include these emotional support factors that may help explain our results.
+
+Future research studies could be conducted to address how the effects of objectification across gender may change when considering same sex couples. Moreover, since the current research highlights the effect objectification has on men, future research may consider conducting more studies that focus on men rather than women; the abundance of research of the objectification of women greatly overwhelms the research that may or may not suggest the same effects of objectification for men.
+
+## Conclusion
 
 Overall, there were no differences between the association between partner objectification and relationship satisfaction between men and women. This is surprising, as it is not consistent with previous literature. In addition, there was no evidence that suggests that self objectification meditates the association between partner objectification and relationship satisfaction. An objectified partner’s relationship satisfaction is not dependent on their relationship satisfaction. We hope for future studies to consider other variables that could mediate partner objectification and relationship satisfaction such as psychological intimacy, particularly in women due to insignificant findings in women’s relationship satisfaction in this study. We did however find that a man's objectification of himself negatively impacts his own relationship satisfaction, and this was not found in women. Our study highlights men’s perspectives of their own perceptions of themselves, while previous studies have highlighted women’s self objectification in relation to their relationship satisfaction. We hope that in an effort to promote quality relationships, our research inspires greater consideration of self objectification in men, and in women.
 
