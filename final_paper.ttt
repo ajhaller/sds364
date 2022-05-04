@@ -1,0 +1,80 @@
+\begin{longtable}[]{@{}
+  >{\raggedright\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.3952}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2016}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2016}}
+  >{\centering\arraybackslash}p{(\columnwidth - 6\tabcolsep) * \real{0.2016}}@{}}
+\caption{Demographic Data}\tabularnewline
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Man (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Woman (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Total (N=346)
+\end{minipage} \\
+\midrule
+\endfirsthead
+\toprule
+\begin{minipage}[b]{\linewidth}\raggedright
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Man (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Woman (N=173)
+\end{minipage} & \begin{minipage}[b]{\linewidth}\centering
+Total (N=346)
+\end{minipage} \\
+\midrule
+\endhead
+\textbf{Race} & & & \\
+Asian or Asian American & 15 (8.7\%) & 20 (11.6\%) & 35 (10.1\%) \\
+Black or African American & 11 (6.4\%) & 11 (6.4\%) & 22 (6.4\%) \\
+Latinx or Hispanic & 10 (5.8\%) & 9 (5.2\%) & 19 (5.5\%) \\
+Middle Eastern & 0 (0.0\%) & 2 (1.2\%) & 2 (0.6\%) \\
+Other & 0 (0.0\%) & 1 (0.6\%) & 1 (0.3\%) \\
+Prefer not to answer & 3 (1.7\%) & 1 (0.6\%) & 4 (1.2\%) \\
+White or European American & 132 (76.3\%) & 127 (73.4\%) & 259 (74.9\%) \\
+White or European American, Latinx or Hispanic & 2 (1.2\%) & 2 (1.2\%) & 4 (1.2\%) \\
+\textbf{Age} & & & \\
+Mean (SD) & 46.890 (8.790) & 44.803 (7.743) & 45.847 (8.337) \\
+Range & 26.000 - 74.000 & 30.000 - 65.000 & 26.000 - 74.000 \\
+\textbf{Sexual Orientation} & & & \\
+Bisexual & 2 (1.2\%) & 6 (3.5\%) & 8 (2.3\%) \\
+Heterosexual & 171 (98.8\%) & 167 (96.5\%) & 338 (97.7\%) \\
+\textbf{Marriage} & & & \\
+Let me explain\ldots{} & 0 (0.0\%) & 1 (0.6\%) & 1 (0.3\%) \\
+No & 14 (8.1\%) & 15 (8.7\%) & 29 (8.4\%) \\
+Yes & 159 (91.9\%) & 157 (90.8\%) & 316 (91.3\%) \\
+\textbf{Income} & & & \\
+N-Missing & 24 & 37 & 61 \\
+Mean (SD) & 75610.128 (56807.296) & 64715.125 (75348.492) & 70411.109 (66409.273) \\
+Range & 0.000 - 540000.000 & 0.000 - 750000.000 & 0.000 - 750000.000 \\
+\bottomrule
+\end{longtable}
+\begin{table*}[hbt]
+\ifnextchar[{\eatarg}{}
+[tbp]
+
+\begin{center}
+\begin{threeparttable}
+
+\caption{\label{tab:unnamed-chunk-2}}
+
+\footnotesize{
+
+\begin{tabular}{llllll}
+\toprule
+ & \multicolumn{1}{c}{M} & \multicolumn{1}{c}{SD} & \multicolumn{1}{c}{Relationship Quality} & \multicolumn{1}{c}{Self Objectification} & \multicolumn{1}{c}{Other Objectification}\\
+\midrule
+Relationship Quality & 7.43 & 1.50 & 1 &  & \\
+Self Objectification & -1.27 & 2.24 & -0.07 & 1 & \\
+Other Objectification & -0.73 & 2.23 & 0.06 & 0.31 & 1\\
+\bottomrule
+\end{tabular}
+
+}
+
+\end{threeparttable}
+\end{center}
+
+\end{table*}

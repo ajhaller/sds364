@@ -88,13 +88,99 @@ Previous studies have not considered self objectification as a mediator between 
 
 ## Participants
 
-Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%. The participants' ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years), and their income ranged from 0 dollars to 750,000 dollars.
++------------------------------------------------+------------------------+------------------------+------------------------+
+|                                                | Man (N=173)            | Woman (N=173)          | Total (N=346)          |
++:===============================================+:======================:+:======================:+:======================:+
+| **Race**                                       |                        |                        |                        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Asian or Asian American                        | 15 (8.7%)              | 20 (11.6%)             | 35 (10.1%)             |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Black or African American                      | 11 (6.4%)              | 11 (6.4%)              | 22 (6.4%)              |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Latinx or Hispanic                             | 10 (5.8%)              | 9 (5.2%)               | 19 (5.5%)              |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Middle Eastern                                 | 0 (0.0%)               | 2 (1.2%)               | 2 (0.6%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Other                                          | 0 (0.0%)               | 1 (0.6%)               | 1 (0.3%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Prefer not to answer                           | 3 (1.7%)               | 1 (0.6%)               | 4 (1.2%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| White or European American                     | 132 (76.3%)            | 127 (73.4%)            | 259 (74.9%)            |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| White or European American, Latinx or Hispanic | 2 (1.2%)               | 2 (1.2%)               | 4 (1.2%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| **Age**                                        |                        |                        |                        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Mean (SD)                                      | 46.890 (8.790)         | 44.803 (7.743)         | 45.847 (8.337)         |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Range                                          | 26.000 - 74.000        | 30.000 - 65.000        | 26.000 - 74.000        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| **Sexual Orientation**                         |                        |                        |                        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Bisexual                                       | 2 (1.2%)               | 6 (3.5%)               | 8 (2.3%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Heterosexual                                   | 171 (98.8%)            | 167 (96.5%)            | 338 (97.7%)            |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| **Marriage**                                   |                        |                        |                        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Let me explain...                              | 0 (0.0%)               | 1 (0.6%)               | 1 (0.3%)               |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| No                                             | 14 (8.1%)              | 15 (8.7%)              | 29 (8.4%)              |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Yes                                            | 159 (91.9%)            | 157 (90.8%)            | 316 (91.3%)            |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| **Income**                                     |                        |                        |                        |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| N-Missing                                      | 24                     | 37                     | 61                     |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Mean (SD)                                      | 75610.128 (56807.296)  | 64715.125 (75348.492)  | 70411.109 (66409.273)  |
++------------------------------------------------+------------------------+------------------------+------------------------+
+| Range                                          | 0.000 - 540000.000     | 0.000 - 750000.000     | 0.000 - 750000.000     |
++------------------------------------------------+------------------------+------------------------+------------------------+
+: Demographic Data
+
+Our sample started off with 182 couples (N=364). We decided to focus our study on heterosexual couples, leading us to exclude 9 same-sex couples from the sample, leaving us with 173 heterosexual couples (N=346). In our study, we asked the couples to answer questions about the role objectification had in their relationship and about their satisfaction within their relationship. All participants were over the age of 18 and in cohabitation with their partners. The majority (75%) of the participants identified as White, 10% were Asian, 6% were Black, and 5% were Hispanic. Other races accounted for the remaining 3%. The participants' ages varied from 26 years of age to 74, with the participants being on average 45.8 years old (sd=8 years), and their income ranged from 0 dollars to 750,000 dollars. *Refer to table 1 for more information.*
 
 ## Measures
 
-**Relationship satisfaction.** Relationship satisfaction is measured with the Relationship Questionnaire [@braiker1979conflict]. Ten out of the 30 items in the relationship questionnaire were used to measure feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Example items of this scale include "To what extent did you love your partner at this stage?", "How committed do you feel towards your partner?" and "How much do you feel you gave to the relationship?." Items were measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698.
+```{r, warning = FALSE, include=FALSE}
+# Correlations between Study Variables
 
-**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated.
+library(dplyr)
+library(readr)
+
+pairwise2 <- read_csv("~/Documents/Smith College/SDS 364/Project/sds364/pairwise2.csv")
+
+vars <- pairwise2 %>% 
+  select(relation_qual.avg_A, self_object.tavg_A, other_object.tavg_A) %>% 
+  rename("Relationship Quality" = relation_qual.avg_A,
+         "Self Objectification" = self_object.tavg_A,
+         "Other Objectification" = other_object.tavg_A)
+
+cor_table <- round(cor(vars, use="complete.obs"), 2)
+
+cor_table[upper.tri(cor_table)]<-""
+
+correlation <- as.data.frame(cor_table) %>% 
+  mutate(M = 0, SD = 0)
+
+correlation$M[1] <- mean(vars$`Relationship Quality`, na.rm = TRUE)
+correlation$M[2] <- mean(vars$`Self Objectification`, na.rm = TRUE)
+correlation$M[3] <- mean(vars$`Other Objectification`, na.rm = TRUE)
+correlation$SD[1] <- sd(vars$`Relationship Quality`, na.rm = TRUE)
+correlation$SD[2] <- sd(vars$`Self Objectification`, na.rm = TRUE)
+correlation$SD[3] <- sd(vars$`Other Objectification`, na.rm = TRUE)
+
+correlation <- correlation[, c(4, 5, 1, 2, 3)]
+```
+
+```{r}
+apa_table(correlation, escape = TRUE, font_size = "footnotesize")
+```
+
+**Relationship satisfaction.** Relationship satisfaction is measured with the Relationship Questionnaire [@braiker1979conflict]. Ten out of the 30 items in the relationship questionnaire were used to measure feelings of love within the relationship. The love scale in the relationship questionnaire reflects the degree to which partners within a relationship express concern, feel a sense of belonging, attachment, and closeness. Example items of this scale include "To what extent did you love your partner at this stage?", "How committed do you feel towards your partner?" and "How much do you feel you gave to the relationship?." Items were measured on a scale from 1- not at all to 9- very much. This scale was reliable, with a Cronbach's alpha of 0.93. The intraclass correlation coefficient for relationship satisfaction was significant, ICC = 0.698. *Refer to Table 2 for more information.*
+
+**Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated. *Refer to Table 2 for more information.*
 
 ## Procedure
 
