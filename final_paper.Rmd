@@ -1,0 +1,120 @@
+---
+title             : "The Presence of Objectification in Heterosexual Relationships"
+shorttitle        : "Objectification in Heterosexual Relationships"
+
+author: 
+  - name          : "Vivian Almaraz"
+    affiliation   : "1"
+  - name          : "AJ Haller"
+    affiliation   : "1"
+  - name          : "Alejandra Munoz"
+    affiliation   : "1"
+
+affiliation:
+  - id            : "1"
+    institution   : "Smith College"
+
+abstract: |
+  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
+  
+  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
+  
+  One sentence clearly stating the **general problem** being addressed by  this particular study.
+  
+  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
+  
+  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
+  
+  One or two sentences to put the results into a more **general context**.
+  
+  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  
+  <!-- https://tinyurl.com/ybremelq -->
+
+bibliography      : ["r-references.bib", "final_references.bib"]
+
+floatsintext      : no
+figurelist        : no
+tablelist         : no
+footnotelist      : no
+linenumbers       : no
+mask              : no
+draft             : no
+
+documentclass     : "apa6"
+classoption       : "man"
+output            : papaja::apa6_pdf
+---
+
+```{r setup, include = FALSE}
+library("papaja")
+r_refs("r-references.bib")
+```
+
+```{r analysis-preferences}
+# Seed for random number generation
+set.seed(42)
+knitr::opts_chunk$set(cache.extra = knitr::rand_seed)
+```
+
+According to objectification theory, women are more socialized than men to internalize the observer’s perspective of their bodies and their physical appearance [@fredrickson1997objectification]. The objectification of women can negatively impact women’s mental health [@fredrickson1997objectification]. This internalization of the observer's perspective may be related to a woman hyper-focusing on her own appearance, and the objectification of herself. Self objectification is an individual’s perception of themselves in which they prioritize physical appearance over physical ability [@sciangula2009self]. Research shows that objectifying oneself and one objectifying their partner are highly associated with one another [@zurbriggen2011self]. This has been found to create sexual pressure for women in relationships [@ramsey2015object]. Yet many studies have shown that objectification within heterosexual relationships often negatively affects both partners’ relationship satisfaction [@mahar2020partner; @ramsey2015object; @ramsey2017sexualized; @saez2019objectification]. The current study explored the differences in objectification between partners in heterosexual relationships and how this influences each partner’s relationship satisfaction. We believe that the association between relationship satisfaction and the objectification of an individual's partner is dependent on self objectification. Objectification research mostly considers the objectification of women outside of the context of relationships, so we have attempted to understand how objectification of oneself and one's partner influences relationship satisfaction in hopes of improving relationship quality. 
+
+The current study used dyadic analyses that considered each individual's objectification of themselves, the degree to which each individual objectifies their partner, and each partner’s relationship satisfaction. Not many studies include perspective from both partners in a relationship, and not many studies consider both an individual's objectification of themselves and the objectification of the partner. To the best of our knowledge this is the first study to take a dyadic approach to investigating how both self and other objectification explain relationship satisfaction within heterosexual relationships. We hope that our research can provide insight as to how men and women objectify themselves and their partner, and how this explains satisfaction in their relationship. 
+
+Research on the effects of objectification of women in relationships have concluded different ideas. There is research that supports objectification theory, in which the objectification of women has negative implications, and there is research that suggests otherwise. Women who are sexually objectified by their partner are more likely to perceive their partner as less likable, are less likely to affiliate with their partner [@teng2015sexual], are more likely to experience body shame [@ramsey2015object] and have decreased relationship, body, and sexual satisfaction [@saez2019objectification]. Alternative literature suggests that women can be satisfied in their relationships even while being objectified by their partners, and objectification is not inherently harmful towards relationship quality. @meltzer2017women have found that in heterosexual relationships, women’s marriage satisfaction and their husband’s sexual valuation is moderated by the husband’s relationship commitment. When a husband’s marriage commitment is high, a women is more satisfied in her marriage and the husband sexually values her more [@meltzer2017women; @meltzer2014tell]. In another scenario observed in heterosexual relationships, women feel less objectified and enjoy the objectication by their partner compared to a stranger, colleague, or friend when women receive objectifying comments from them [@lameiras2018objectifying]. Lameiras-Fernández suggests that women’s perception of being objectified depends on the level of psychological intimacy with the objectifier. These results are surprising because the majority of research on objectification theory highlights the negative implications of objectification within relationships, so why does alternative research suggest otherwise? It is important to establish that partner objectification in relationships does not always have negative implications, and other factors such as psychological intimacy or self objectification can influence how objectification from a partner is perceived. The current study has pushed beyond previous research. Not only has this study explored partner objectification with dyadic analyses, but has also included perceived self regard, or self objectification to mediate this relationship. 
+
+Self objectification consistently serves as an important factor of relationship satisfaction in heterosexual relationships. Levels of self esteem influences individuals perceptions of themselves and their self objectification, and this perceived self regard predicts less relationship satisfaction [@sciangula2009self]. Research has found that the more individuals within a partnership self-objectify, the lower they judge the quality of the relationship [@strelan2018birds], and are more likely to objectify their partners [@strelan2005women]. Additionally, @zurbriggen2011self has also found that an individual objectified by their partners are more likely to objectify themselves. This research suggests that there is a relationship between self objectification and partner objectification. Not only does self objectification interact with relationship satisfaction, but partner objectification is related to relationship satisfaction, as cited earlier. To the best of our knowledge, not many studies have considered both self objectification and partner objectification in relationship satisfaction research, nor have other studies considered how relationship satisfaction and partner objectification may depend on self objectification. Unlike previous studies, the current study went beyond past studies and included self objectification as a mediating role in the model. 
+
+A large majority of prior studies on self objectification focus exclusively on these effects on women. For example, women still tend to feel guilty or experience body shame if they enjoy being sexualized [@visser2014enjoyment], they are more likely to feel objectified if they enjoy sexualization [@ramsey2017sexualized], and they experience more body surveillance, body shame, and body dissatisfaction than men [@gervais2011you; @choma2010self]. Women are also more cognizant of self-objectification than men [@newheiser2010others] and are more affected in their current relationship by previous encounters of objectification [@teran2021relational] than men. However, research shows that for men, an increase in body surveillance and body shame is associated with less social and romantic relationship pathways [@cole2013body]. Although much of the prior research focuses heavily on women and self objectification, self objectification is still present in men. Objectification theory emphasizes the consequential societal pressures only on women, but it is important to also consider men’s perspective of objectifation because the research is in the context of heterosexual relationships . Accordingly, this current study included gender as a moderator in the relationships between partner objectification, self objectification, and relationship satisfaction. 
+
+## The Current Research
+
+Previous research has explored how the objectification of one’s partner negatively influences relationship satisfaction, and how perceived self regard, self objectification, is also negatively related to relationship satisfaction for both men and women in hereosexual relationships[@saez2019objectification; @sciangula2009self]. Consistent with previous research, we expect an individual's objectification of their partner will negatively influence relationship satisfaction for both men and women. It has been found that both men and women who self-objectify have higher tendencies to objectifying others [@strelan2005women]. Higher self and other objectification have a strong correlation with lower body satisfaction in women, but the same cannot be said for men [@strelan2005women]. Men and women interact with self and partner objectification differently, and much of the current literature focuses on the way women interact with objectification. In order to understand how relationship quality can be improved, it is important to consider how men experience objectification and objectify others. We wish to explore these differences in gender in our study. We hypothesize there will be a stronger association between partner objectification and relationship satisfaction for women’s relationship satisfaction than for men. 
+
+Previous studies have not considered self objectification as a mediator between partner objectification and relationship satisfaction. Research shows that self objectification and partner objectification are positively associated with one another [@zurbriggen2011self]. Separate studies have found that objectifyng ones partner and self objectifying both decrease one’s relationship satisfaction in a heterosexual relationship [@saez2019objectification; @sciangula2009self]. Given the findings of previous studies, self objectification, partner objectification, and relationship satisfaction have associations with one another, and we suspect that partner objectification and relationship satisfaction would be dependent on one’s perceived regard for themselves. We hypothesize that the association between men’s objectification of his partner and his partner’s relationship satisfaction will be mediated by women’s objectification of herself. On the other hand, we expect that the association between women's objectification of her partner and her partner’s relationship satisfaction will be mediated by men’s objectification of himself. To our knowledge, this is the first study to mediate self objectification and moderate gender as part of a dyadic analysis. This current study investigated objectification of both individual and partner influence relationship satisfaction within heterosexual relationships across gender. We hope to understand how partners can be satisfied in their relationships, improve relationship quality, and highlight how objectification differs between gender.
+
+## Hypotheses
+
+1. An individual's objectification of their partner will negatively influence relationship satisfaction for both men and women.
+
+2. There will be a stronger association between partner objectification and relationship satisfaction for women’s relationship satisfaction than for men.
+
+3. The association between men’s objectification of his partner and his partner’s relationship satisfaction will be mediated by women’s objectification of herself.
+
+4. The association between women's objectification of her partner and her partner’s relationship satisfaction will be mediated by men’s objectification of himself.
+
+
+# Methods
+We report how we determined our sample size, all data exclusions (if any), all manipulations, and all measures in the study. <!-- 21-word solution (Simmons, Nelson & Simonsohn, 2012; retrieved from http://ssrn.com/abstract=2160588) -->
+
+## Participants
+
+## Material
+
+## Procedure
+
+## Data analysis
+
+# Results
+
+# Discussion
+
+####Restating results: hypothesis 3 and 4####
+
+There is no evidence that supports self objectification meditates the association between partner objectification and relationship satisfaction in this study. Our results did find that an individual objectified by their partner is likely to objectify themselves, and an individual that objectifies their partner is likely to objectify themselves, both of which are consistent with previous literature [@zurbriggen2011self; @strelan2005women]. Research shows there are associations between self objectification, partner objectification, and relationship satisfaction, so it was surprising that our findings suggest that self objectification does not mediate partner objectification and relationship satisfaction. It is possible that these hypotheses were not supported due to possible confounding variables, such as psychological intimacy as mentioned by @lameiras2018objectifying.
+
+## Conclusions
+
+Overall, there were no differences between the association between partner objectification and relationship satisfaction between men and women. This is surprising, as it is not consistent with previous literature. In addition, there was no evidence that suggests that self objectification meditates the association between partner objectification and relationship satisfaction. An objectified partner’s relationship satisfaction is not dependent on their relationship satisfaction. We hope for future studies to consider other variables that could mediate partner objectification and relationship satisfaction such as psychological intimacy, particularly in women due to insignificant findings in women’s relationship satisfaction in this study. We did however find that a man's objectification of himself negatively impacts his own relationship satisfaction, and this was not found in women. Our study highlights men’s perspectives of their own perceptions of themselves, while previous studies have highlighted women’s self objectification in relation to their relationship satisfaction. We hope that in an effort to promote quality relationships, our research inspires greater consideration of self objectification in men, and in women.
+
+
+\newpage
+
+# References
+
+\begingroup
+\setlength{\parindent}{-0.5in}
+\setlength{\leftskip}{0.5in}
+
+<div id="refs" custom-style="Bibliography"></div>
+\endgroup
