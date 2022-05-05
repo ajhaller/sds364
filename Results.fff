@@ -16,13 +16,6 @@
 \ifnextchar[{\eatarg}{}
 
 \centering
-\includegraphics{Images/ResultsTableEdited.png}
-\caption{Other Objectification vs.~Relationship Satisfaction Mediated by Self Objectification}
-\end{figure*}
-\begin{figure*}[hbt]
-\ifnextchar[{\eatarg}{}
-
-\centering
 \includegraphics{Images/OO_vs_RSA.png}
-\caption{\textbf{Exploratory Analysis:} (Other Objectification vs.~Relationship Satisfaction) During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying theirself and their partner self objectifying, regardless of gender}
+\caption{Other Objectification vs.~Relationship Satisfaction}
 \end{figure*}

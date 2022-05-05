@@ -15,6 +15,8 @@ footnotelist      : no
 linenumbers       : no
 mask              : no
 draft             : no
+fig_caption       : no
+figsintext        : no
 
 documentclass     : "apa6"
 classoption       : "man"
@@ -58,26 +60,36 @@ pairwise <- pairwise %>%
 
 Our study aims to provide insight into how men and women in relationships objectify themselves and their partner differently, and how this explains their own and their partner's satisfaction in their relationship. We hypothesized that high levels of being objectified by one's partner will be associated with lower levels of relationship satisfaction for both men and women; there will be a stronger association between being objectified and relationship satisfaction for women than for men in heterosexual relationships; the association between a man's objectification of his partner and his partner's relationship satisfaction will be mediated by the woman's objectification of herself; the association between a woman's objectification of her partner and her partner's relationship satisfaction will be mediated by the man's objectification of himself.
 
+ADD DYADIC DATA PARAGRAPH HERE
+
 ## Main Results
 
 ### Relationship Satisfaction and Partner Objectifcation
 
-Figure 1 shows the direct association between predictors (his objectification of her and her objectification of him, and relationship satisfaction for both the man and the woman. Figure 1 shows there were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction (<em>b</em> = 0.011, <em>SE</em> = .057, <em>p</em> = 0.846), nor between the woman's objectification of her partner with the man's relationship satisfaction (<em>b</em> = 0.002, <em>SE</em> = .060, <em>p</em> = 0.967) (see Figure 1). Hypothesis 1 was not supported as the results show there was not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 was not supported as the results show there are not statistically significant differences in the relationship between other objectification and relationship satisfaction between genders. Please refer to Figure 2 for more information about ..........
+Figure 1 shows the direct association between predictors (his objectification of her and her objectification of him, and relationship satisfaction for both the man and the woman. Figure 1 shows there were no significant associations between a man's objectification of his partner with the woman's relationship satisfaction (<em>b</em> = 0.011, <em>SE</em> = .057, <em>p</em> = 0.846), nor between the woman's objectification of her partner with the man's relationship satisfaction (<em>b</em> = 0.002, <em>SE</em> = .060, <em>p</em> = 0.967) (see Figure 1). Hypothesis 1 was not supported as the results show there was not a statistically significant relationship between other objectification and relationship satisfaction for both men and women. Hypothesis 2 was not supported as the results show there are not statistically significant differences in the relationship between other objectification and relationship satisfaction between genders. Please refer to Figure 2 for more information about our findings. 
 
 The Moderated Mediation Model: This figure shows the associations between predictors, mediators, and response variables as moderated by gender. Mediation model 1 is represented by light grey arrows, and mediation model 2 is represented by dark grey arrows. Dashed arrows are not statistically significant coefficients (b) with associated p-values \> 0.05. Bold arrows and asterix are statistically significant coefficients (b) with associated p-values \< 0.05.
 
-### Relationship Satisfaction with Mediation
 
-Mediation models 1 and 2 include the variable self objectification for both the man and the woman as a mediator of the relationship between a man's other objectification of his partner and the woman's relationship satisfaction (model 1), and the associations between a woman's other objectification of her partner and the man's relationship satisfaction (model 2).
+EXPLAIN THE b's IN PARENTHESIS
 
-In Mediation model 1, there was no significant association between the man's partner objectification towards the woman with the woman's relationship satisfaction while controlling for the woman's objectification of herself (<em>b</em> = 0.03, <em>SE</em> = .064, <em>p</em> = 0.687)(see Figure 1). This does not support our third hypothesis which suggested that the association between man's objectification of his partner and the partner's relationship satisfaction is dependent on a woman's objectification of herself. However, model 1 did result in a statistically significant association between the man's partner objectification and the woman's self objectification (<em>b</em> = 0.279, <em>p</em> < 0.001)(see Figure 1.). This suggests that a man who objectifies the woman in a heterosexual relationship is associated with the woman objectifying herself more.
+### Relationship Satisfaction Controlling for Self Objectification
 
-Model 2 shows that there is no significant association between a woman's objectification of her partner and the partner's relationship satisfaction with the man's self objectification as a mediating variable (<em>b</em> = 0.026, <em>p</em> = 0.687)( see Figure 1.). This does not support our fourth hypothesis that the association between a woman's objectification of her partner and the partner's relationship satisfaction is dependent on a man's objectification of himself. However, Model 2 also shows that there is a statistically significant indirect relationship between the woman's partner objectification and the man's self objectification (<em>b</em> = 0.209, <em>p</em> = 0.011). This suggests that a woman's partner objectification towards the man makes men in heterosexual relationships objectify themselves more. Results in model 2 also show that a man's objectification of himself is associated with a decrease in his relationship satisfaction (<em>b</em> = -0.150, <em>p</em> = 0.015)(see Figure 1.).
+Mediation models 1 and 2 include the variable self-objectification for both the man and the woman as a mediator of the relationship between a man's other objectification of his partner and the woman's relationship satisfaction (model 1), and the associations between a woman's other objectification of her partner and the man's relationship satisfaction (model 2).
+
+In Mediation model 1, there was no significant association between the man's other objectification on woman's self-objectification with the woman's relationship satisfaction while controlling for the woman's objectification of herself (<em>b</em> = 0.03, <em>SE</em> = .06, <em>p</em> = 0.687)(see Figure 1). **This does not support our third hypothesis which suggested that the association between man's objectification of his partner and the partner's relationship satisfaction is dependent on a woman's objectification of herself.** However, model 1 did result in a statistically significant association between the man's other objectification and the woman's self-objectification (<em>b</em> = 0.21, <em>SE</em> = 0.08, <em>p</em> < 0.011)(see Figure 1.). This suggests that a man’s objectification of the woman in a heterosexual relationship has a positive effect with the woman’s self-objectification, meaning that when the man objectifies the woman at a higher rate, the woman will also objectify herself at a higher rate. 
+Model 2 shows that there is no significant association between a woman's other objectification of her partner and the man's relationship satisfaction with the man's self-objectification as a mediating variable (<em>b</em> = 0.04, <em>SE</em> = 0.061, <em>p</em> = 0.520)( see Figure 1.). **This does not support our fourth hypothesis that the association between a woman's other objectification of her partner and the man's relationship satisfaction is dependent on a man's objectification of himself.** However, model 2 shows that there is a statistically significant relationship between the woman's other objectification of man and the man's self-objectification (<em>b</em> =.28, <em>SE</em> = .07, <em>p</em> < 0.001). This suggests that a woman's other objectification of her partner makes the man in heterosexual relationships objectify themselves more. Results in model 2 also show that a man's objectification of himself is associated with a decrease in his relationship satisfaction (<em>b</em> = -0.150, <em>SE</em> = .06, <em>p</em> = 0.015)(see Figure 1.), meaning that the more a man self objectifies, the more unhappy he will be with his relationship.
+
+## Exploratory Analysis
+During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying their self and their partner self objectifying, regardless of gender. 
+
 
 ![Hypothesis](Images/hypothesis_model_results.png)
 
 ![Self Objectification vs. Relationship Satisfaction: Only the relationship between Self Objectification and Relationship Satisfaction was significant for males, that is, the more males in heterosexual relationships self objectify, the less satisfied they are with their relationships on average](Images/SO_RS_updated.png)
 
-![Other Objectification vs. Relationship Satisfaction Mediated by Self Objectification](Images/ResultsTableEdited.png)
+\centering
+![Other Objectification vs. Relationship Satisfaction Mediated by Self Objectification](Images/ResultsTableEdited.png) Table1
 
-![**Exploratory Analysis:** (Other Objectification vs. Relationship Satisfaction) During the course of our analysis we found significance in relationships we had not originally hypothesized, however, these relationships are consistent with previously cited literature. We found that objectifying a partner is positively associated with objectifying theirself and their partner self objectifying, regardless of gender](Images/OO_vs_RSA.png)
+\centering
+![Other Objectification vs. Relationship Satisfaction](Images/OO_vs_RSA.png)
