@@ -182,8 +182,6 @@ apa_table(correlation, escape = TRUE, font_size = "footnotesize")
 
 **Objectification.** Both self and other objectification was measured with the Self-Objectification Questionnaire [@noll1998mediational]. Each participant completed the questionnaire two times, first based on how they feel about themselves, and then how feel about their partner. The Self-Objectification Questionnaire asks participants to rank the extent to which they perceive their bodies and partner's bodies by appearance, and by physical ability. Some of these items include weight, physical attractiveness, overall health, and strength. Participants rank these ten aspects from 10 being most important, to 1 being least important. The intraclass correlation coefficient for self objectification was low, ICC = 0.241, and the intraclass correlation coefficient for other objectification was also low, ICC = 0.181. The self and other objectification scales are personality measures so we do not expect the intraclass coefficients to be highly correlated. *Refer to Table 2 for more information.*
 
-## Procedure
-
 The participants were asked to complete questionnaires and a daily measure for 14 days. Participants were not compensated for completing the questionnaires but received \$2 for every day they completed the daily measures.
 
 # Results
