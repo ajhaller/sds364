@@ -15,19 +15,7 @@ affiliation:
     institution   : "Smith College"
 
 abstract: |
-  One or two sentences providing a **basic introduction** to the field,  comprehensible to a scientist in any discipline.
-  
-  Two to three sentences of **more detailed background**, comprehensible  to scientists in related disciplines.
-  
-  One sentence clearly stating the **general problem** being addressed by  this particular study.
-  
-  One sentence summarizing the main result (with the words "**here we show**" or their equivalent).
-  
-  Two or three sentences explaining what the **main result** reveals in direct comparison to what was thought to be the case previously, or how the  main result adds to previous knowledge.
-  
-  One or two sentences to put the results into a more **general context**.
-  
-  Two or three sentences to provide a **broader perspective**, readily comprehensible to a scientist in any discipline.
+  The current study used dyadic analyses that considered each individual's objectification of themselves, the degree to which each individual objectifies their partner, and each partner’s relationship satisfaction. Not many studies include perspective from both partners in a relationship, and not many studies consider both an individual's objectification of themselves and the objectification of the partner. To the best of our knowledge this is the first study to take a dyadic approach to investigating how both self and other objectification explain relationship satisfaction within heterosexual relationships. We found no evidence to support that an individual’s objectification of their partner negatively influences relationship satisfaction for both men and women. Additionally, we also found no evidence to support our hypothesis that there is a stronger association between partner objectification and relationship satisfaction for women’s relationship satisfaction than for men’s. However, our results did find that a man’s objectification of himself has a negative effect on his relationship satisfaction, meaning that the more the man objectifies himself, the less happy he will be in his relationship. The same was not found for women, as there was no significant relationship found between a woman’s self-objectification and her own relationship satisfaction at all.We hope that in an effort to promote quality relationships, our research inspires greater consideration of self objectification in men, and in women.
   
   <!-- https://tinyurl.com/ybremelq -->
 
@@ -188,11 +176,9 @@ The participants were asked to complete questionnaires and a daily measure for 1
 
 # Discussion
 
-####Restating results: hypothesis 3 and 4####
+
 
 There is no evidence that supports self objectification meditates the association between partner objectification and relationship satisfaction in this study. Our results did find that an individual objectified by their partner is likely to objectify themselves, and an individual that objectifies their partner is likely to objectify themselves, both of which are consistent with previous literature [@zurbriggen2011self; @strelan2005women]. Research shows there are associations between self objectification, partner objectification, and relationship satisfaction, so it was surprising that our findings suggest that self objectification does not mediate partner objectification and relationship satisfaction. It is possible that these hypotheses were not supported due to possible confounding variables, such as psychological intimacy as mentioned by @lameiras2018objectifying.
-
-####Limitations of the study and alternative explanations####
 
 Limitations for our study arrived in the initial phases of devising the methodology. We intended to evaluate how the effects of objectification varied across sexuality, more specifically, the differences between heterosexual (male-female) couples and same sex couples. However, due to the lack of same sex couples in our sample, we limited the scope of our study to only heterosexual couples, and evaluated how the effects varied across gender. Limiting our study to male-female dyads leaves a couple questions left to be answered, for example, "Considering that Objectification Theory typically only discusses how women are affected by men's objectification of them, how do the effects of objectification change when no or only men are present in a relationship (same sex relationships)?" 
 
